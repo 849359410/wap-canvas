@@ -1,0 +1,87 @@
+.tangList {
+    background-color: #ffffff;
+    opacity: 0.95;
+    z-index: 100000;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    color: #333333;
+    .logoImg {
+        position: absolute;
+        width: 100%;
+        left: 20px;
+        top: 30px;
+        .van-image {
+            height: 42px;
+            /deep/ img {
+                width: auto;
+            }
+        }
+    }
+    .top {
+        position: absolute;
+        width: 100%;
+        left: 20px;
+        top: 100px;
+        .van-row {
+            display: flex;
+        }
+        .left {
+            width: 64px;
+            position: relative;
+            .van-image {
+                width: 54px;
+            }
+            span {
+                position: absolute;
+                left: 0;
+                width: 54px;
+                top: 12px;
+                text-align: center;
+                font-size: 24px;
+                color: #ffffff;
+                font-weight: 600;
+            }
+        }
+        .right {
+            width: 75%;
+            color: #666666;
+            font-size: 14px;
+            .date {
+                font-size: 24px;
+            }
+        }
+    }
+    .center {
+        position: absolute;
+        width: 100%;
+        bottom: 100px;
+        .van-row {
+            margin: 0 5%;
+            text-align: center;
+            p {
+                text-align: center;
+                font-size: 14px;
+                color: #999999;
+            }
+            .van-image {
+                width: 73px;
+            }
+        }
+    }
+    .bottom {
+        position: absolute;
+        width: 100%;
+        bottom: 20px;
+        font-size: 20px;
+        text-align: center;
+        .van-icon {
+            font-size: 30px;
+            color: #685c63;
+        }
+    }
+
+}

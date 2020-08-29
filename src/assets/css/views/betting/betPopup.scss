@@ -1,0 +1,117 @@
+@import "../../mixins/mixin";
+.allPopup {
+	position: relative;
+	border-radius: 4px;
+	background: #ffffff;
+	height: 100%;
+	max-height: 352px;
+	min-height: 270px;
+	padding-bottom: 1px;
+	.popup_head {
+		display: flex;
+		@include bgColor();
+		position: relative;
+		p {
+			width: 100%;
+			height: 40px;
+			line-height: 2.5rem;
+			text-align: center;
+			font-size: 14px;
+			color: #ffffff;
+			@include bgColor();
+			font-family: "PinFang-SC-Medium";
+		}
+		@at-root #{&}--icon {
+			position: absolute;
+			text-align: center;
+			line-height: 39px;
+			font-size: 22px;
+			color: white;
+			width: 39px;
+			height: 39px;
+			right: 0;
+		}
+	}
+	.popup_main {
+		overflow-y: scroll;
+		padding-right: 20px;
+		margin: 10px -10px 10px 10px;
+		min-height: 160px;
+		max-height: 210px;
+		.popup_main_head {
+			width: auto;
+			display: flex;
+			div {
+				@include bgColor(#c7c7c7);
+				line-height: 30px;
+				width: 33%;
+				text-align: center;
+				font-size: 12px;
+				color: #ffffff;
+			}
+		}
+		@at-root #{&}-body {
+			max-height: 150px;
+			min-height: 90px;
+			overflow-y: scroll;
+		}
+		@at-root #{&}_input {
+			div {
+				color: #000000 !important;
+				background: #ffffff !important;
+			}
+			input {
+				width: 90%;
+				margin: 0 auto;
+				line-height: 24px;
+				height: 24px;
+				box-sizing: border-box;
+				border: 1px solid #ddd;
+				@include fontColor(#f72528);
+				text-align: center;
+				border-radius: 4px;
+			}
+		}
+		.popup_main_body {
+			width: auto;
+			display: flex;
+			border-bottom: 1px solid #fff;
+			div {
+				background: #f4f4f4;
+				line-height: 30px;
+				width: 33%;
+				text-align: center;
+				font-size: 12px;
+				color: #000;
+				word-break: break-all;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				p {
+					line-height: 20px;
+					word-wrap: break-word;
+					word-break: break-all;
+				}
+			}
+		}
+	}
+	.popup_foot {
+		text-align: center;
+		.van-col {
+			@include fontColor(#f00);
+			font-size: 12px;
+			font-family: "PingFang-SC-Regular";
+		}
+	}
+	.popup_button {
+		width: auto;
+		margin: 10px 20px 20px 20px;
+		.popup_button_go {
+			border-radius: 50px;
+			width: 100%;
+			height: 35px;
+			line-height: 35px;
+			@include bgColor();
+		}
+	}
+}

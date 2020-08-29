@@ -1,0 +1,311 @@
+@import "../../mixins/mixin";
+$div-color: #ef384a;
+.trend {
+    overflow: hidden;
+    @at-root #{&}--happy {
+        th {
+            min-width: 60px;
+            height: 36px;
+            line-height: 36px;
+            font-size: 14px;
+            color: #666666;
+            background-color: #f0f0f0;
+        }
+        tr {
+            background-color: #ffffff !important;
+            td {
+                text-align: center;
+                padding: 0 5px;
+                font-size: 13px;
+                color: #1f1f1f;
+                vertical-align: middle;
+                span {
+                    width: 24px;
+                    line-height: 24px;
+                    text-align: center;
+                    display: inline-block;
+                    font-size: 12px;
+                    color: #e91e63;
+                }
+            }
+        }
+    }
+    @at-root #{&}--lhc {
+        table {
+            width: 100%;
+            tr {
+                &:nth-child(1) {
+                    font-weight: bold;
+                    line-height: 28px;
+                }
+                td {
+                    text-align: center;
+                    font-size: 12px;
+                    vertical-align: middle;
+                    min-width: 32px;
+                    &:nth-child(8) {
+                        background: #e0cece;
+                    }
+                }
+                @at-root #{&}_code {
+                    display: inline-block;
+                    color: #f1f1f1;
+                    @include bgColor();
+                    background: linear-gradient(0deg, #f0a7ad 0, $div-color 75%);
+                    background: -webkit-linear-gradient(top, #f0a7ad, #ef3e29 75%);
+                    width: 25px;
+                    height: 25px;
+                    line-height: 25px;
+                    font-size: 12px;
+                    font-weight: 400;
+                    border-radius: 50%;
+                    text-align: center;
+                    font-style: inherit;
+                    vertical-align: top;
+                    box-shadow: 0 3px 1px #bbb59c;
+                    margin: 0;
+                }
+                .green {
+                    background: -webkit-linear-gradient(top, #9be4a8, #09821f 75%) !important;
+                }
+                .blue {
+                    background: -webkit-linear-gradient(top, #9caebd, #0202b5 75%) !important;
+                }
+            }
+        }
+    }
+    @at-root #{&}--chart {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 90px;
+        .trend--chart_right {
+            height: 100%;
+            table {
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                line-height: 25px;
+                color: #5a4c4c;
+                font-size: 12px;
+                position: relative;
+                .sixLottery:first-child {
+                    background: #ffffff;
+                }
+
+                .sixLottery:nth-child(2) {
+                    td {
+                        span {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                tr:nth-child(odd) {
+                    background: #fff0f0;
+                }
+
+                tr:nth-child(even) {
+                    background: #ffffff;
+                }
+
+                tr:nth-child(1),
+                td:nth-child(1) {
+                    min-width: 66px;
+                }
+                .trend--chart_top_tab:nth-child(-n+3) {
+                    td:nth-child(1) {
+                        min-width: 87px;
+                    }
+                    td:nth-child(2) {
+                        width: 56px!important;
+                    }
+                    td:nth-child(3) {
+                        width: 70px!important;
+                    }
+                    td:nth-child(n + 4) {
+                        width: 26px;
+                    }
+
+                }
+                .trend--chart_top_tab {
+                    td {
+                        padding: 3px 0!important;
+                    }
+                }
+            }
+        }
+
+        @at-root #{&}_right {
+            float: right;
+            width: 100%;
+            position: absolute;
+            overflow: scroll;
+            z-index: 1;
+            @at-root #{&}_mark-six {
+                span {
+                    display: inline-block;
+                    width: 100%;
+
+                    &.zodiacs {
+                        background-color: inherit !important;
+                        color: #1f1f1f !important;
+                    }
+
+                    &:first-child {
+                        width: 24px;
+                        height: 24px;
+                        line-height: 24px;
+                        border-radius: 50%;
+                        color: #ffffff;
+                        background-color: #eeeeee;
+                    }
+
+                    &.red {
+                        @include bgColor();
+                    }
+
+                    &.blue {
+                        background-color: #0099cc !important;
+                    }
+
+                    &.green {
+                        background-color: #33cc66 !important;
+                    }
+                }
+            }
+            @at-root #{&}_happy {
+                display: block;
+                width: 180px;
+                span {
+                    width: 18px;
+                    display: inline-block;
+                    text-align: center;
+                }
+            }
+            @at-root #{&}_lucky {
+                span {
+                    &.red {
+                        color: #ef0030 !important;
+                    }
+
+                    &.blue {
+                        color: #0099cc !important;
+                    }
+
+                    &.green {
+                        color: #33cc66 !important;
+                    }
+                }
+            }
+            @at-root #{&}_tab {
+                min-width: 40px;
+            }
+            @at-root #{&}_width {
+                padding: 0 5px 0 5px !important;
+            }
+            @at-root #{&}_active {
+                width: 20px;
+                height: 20px;
+                line-height: 20px;
+                border-radius: 20px;
+                box-shadow: 1px 1px 2px $div-color;
+                font-size: 14px;
+                text-align: center;
+                color: #fff;
+                @include bgColor();
+                font-weight: 500;
+                z-index: 100;
+                margin: auto;
+            }
+            @at-root #{&}_canvas {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 99;
+            }
+        }
+    }
+    @at-root #{&}--special {
+        top: 45px !important;
+    }
+    @at-root #{&}--lucky {
+        overflow: hidden;
+        top: 0 !important;
+        font-size: 12px;
+        table {
+            tr {
+                td {
+                    &:first-child {
+                        display: none;
+                    }
+                    &:nth-child(2),
+                    &:nth-child(3) div {
+                        width: 80px;
+                        display: block;
+                    }
+                    &:nth-child(4) div {
+                        width: 50px;
+                        display: block;
+                    }
+                    &:nth-child(1) div {
+                        width: 70px !important;
+                        z-index: 1000;
+                    }
+                }
+                &:nth-last-child(1),
+                &:nth-last-child(2) {
+                    td:first-child {
+                        //background: #7d686a;
+                        color: #fff;
+                    }
+                }
+                &:nth-last-child(1),
+                &:nth-last-child(2) {
+                    td {
+                        background: inherit;
+                        color: inherit;
+                    }
+                }
+            }
+        }
+        @at-root #{&}_left {
+            float: left;
+            width: 25%;
+            @at-root #{&}_per {
+                margin: 0;
+                width: 100%;
+                line-height: 36px;
+                list-style: none;
+                text-align: center;
+                float: left;
+                padding: 0;
+                z-index: 1;
+                background: #ffffff;
+                li {
+                    color: #fff;
+                    border-bottom: 1px solid #ffffff;
+                    line-height: 35px;
+                    height: 35px;
+                    &:first-child {
+                        color: #fff;
+                        margin-top: 1px;
+                    }
+                }
+            }
+        }
+        @at-root #{&}_right {
+            width: 100%;
+            table {
+                tr:first-child {
+                    td:nth-child(3) {
+                        display: block;
+                        width: 50px;
+                    }
+                }
+            }
+        }
+    }
+}

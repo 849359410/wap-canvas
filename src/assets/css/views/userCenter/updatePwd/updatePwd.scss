@@ -1,0 +1,30 @@
+@import "../../../mixins/mixin";
+.updatePwd {
+    .updatePwd--box {
+        margin: 10px;
+    }
+    p {
+        font-size: 12px;
+        padding: 8px 10px;
+        line-height: 21px;
+        i {
+            color: #00b0ff;
+            padding: 0;
+            font-style: normal !important;
+        }
+        .tips {
+            @include fontColor();
+        }
+    }
+    .comfirm-update {
+        width: 94%;
+        margin: 20px auto !important;
+        line-height: 40px;
+        background: -webkit-gradient(linear, left top, right top, from(#ffba00), to(#ef384a));
+        background: linear-gradient(to right, #ffba00, #ef384a);
+        text-align: center;
+        color: #fff;
+        border-radius: 6px;
+        font-size: 17px;
+    }
+}

@@ -1,0 +1,243 @@
+@import "../../../mixins/mixin";
+.message--ul {
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    box-shadow: 0 -1px 4px 0 rgba(0, 0, 0, 0.07);
+    @at-root #{&}_li {
+        padding: 0 !important;
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 10px !important;
+        margin-bottom: 10px;
+        box-shadow: 0 2px 10px 0 rgba(153, 153, 153, 0.2);
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-image: -webkit-linear-gradient(90deg, #dfdfdf, #dfdfdf 100%, transparent 0);
+        }
+        &:nth-last-child(1):after {
+            background-image: none;
+        }
+        @at-root #{&}_credit {
+            .lineShow {
+                width: 100%;
+                padding-left: 10px;
+                background: #f8f8f8;
+            }
+            @at-root #{&}_left {
+                display: block;
+                width: 100%;
+                height: 31px;
+                padding-left: 10px;
+                span {
+                    display: block;
+                    height: 20px;
+                    font-size: 12px;
+                    line-height: 20px;
+                    width: 70px;
+                    border-radius: 4px;
+                    @include bgColor();
+                    color: #fff;
+                    text-align: center;
+                    margin: 10px 0;
+                }
+            }
+            .message--ul_li_code_right {
+                padding-bottom: 0;
+                .right_688 {
+                    width: 16.6% !important;
+                    min-width: 16.6% !important;
+                }
+                .message--ul_li_code_right_item {
+                    width: 25%;
+                    min-width: 20%;
+                    &.message--ul_li_code_right_four {
+                        min-width: 25%;
+                    }
+                    &.message--ul_li_code_right_five {
+                        min-width: 20%;
+                    }
+                    &.message--ul_li_code_right_three {
+                        min-width: 33.33%;
+                    }
+                    &.message--ul_li_code_right_twentyOne {
+                        min-width: 16%;
+                    }
+                    &.message--ul_li_code_right_two {
+                        max-width: 25%;
+                    }
+                    div {
+                        width: 90%;
+                        height: auto;
+                        display: inline-block;
+                        margin: 3% 1%;
+                        border: 1px solid #d3d3d3;
+                        border-radius: 5px;
+                        position: relative;
+                        text-align: center;
+                        padding: 0.14rem 0;
+                        &.is-active {
+                            background-color: #ff8d91;
+                            span {
+                                color: #ffffff !important;
+                            }
+                            .sign {
+                                display: block;
+                                top: -0.9rem;
+                                width: 1.6rem;
+                                height: 1.6rem;
+                                position: absolute;
+                                background-size: 1.6rem !important;
+                                -webkit-animation: fly 0.2s forwards;
+                                animation: fly 0.2s forwards;
+                                right: -0.5rem;
+                            }
+                        }
+                        span {
+                            display: block;
+                            font-size: 18px;
+                            margin: 5px 0.1rem;
+                            line-height: 18px;
+                            color: #666666;
+                            font-weight: 700;
+                            &:last-child {
+                                font-size: 12px;
+                                color: #666666;
+                                font-weight: inherit;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .message--ul_li_code_ball_list {
+            button {
+                width: 40px;
+                height: 30px;
+                line-height: 30px;
+                font-size: 12px;
+                padding: 0;
+                margin: 0 2px;
+            }
+        }
+        @at-root #{&}_code {
+            @at-root #{&}_left {
+                display: block;
+                width: 70px;
+                height: 30px;
+                line-height: 30px;
+                font-size: 14px;
+                text-align: center;
+                color: #898989;
+                background: #ffffff;
+                border: 1px solid rgba(217, 217, 217, 0.6);
+                border-radius: 3px;
+                box-shadow: 1px 1px 4px #00000057;
+                @at-root #{&}_odds {
+                    font-size: 12px;
+                    color: #666666;
+                    margin-bottom: 10px;
+                }
+            }
+            @at-root #{&}_popup {
+                padding: 0 10px 10px 10px;
+                width: 100%;
+                span {
+                    font-size: 14px;
+                }
+            }
+            .marginBottom {
+                padding-top: 20px;
+            }
+            @at-root #{&}_right {
+                text-align: center;
+                position: relative;
+                padding-left: 5px;
+                display: flex;
+                flex-wrap: wrap;
+                /*padding: 10px;*/
+                button {
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    font-size: 12px;
+                    font-weight: 400;
+                    text-align: center;
+                    padding: 0;
+                    border-radius: 50%;
+                    margin-bottom: 10px;
+                    box-shadow: 0 1px 1px #00000057;
+                    &.button--light span:first-child {
+                        color: #ff0000;
+                    }
+                    &.button-long {
+                        width: auto;
+                        padding: 0 10px;
+                        border-radius: 4px;
+                        text-align: center;
+                        font-size: 12px;
+                    }
+                }
+                .right_five {
+                    width: 50% !important;
+                    margin: 0 auto;
+                }
+                @at-root #{&}_odds {
+                    font-size: 12px;
+                    color: #666666;
+                    margin-bottom: 10px;
+                }
+                @at-root #{&}_item {
+                    display: inline-block;
+                    float: left;
+                    margin: 0;
+                    width: 20%;
+                    .medium-width {
+                        min-width: 25%;
+                    }
+                    .big-width {
+                        min-width: 50%;
+                    }
+                }
+            }
+            @at-root #{&}_fast {
+                position: relative;
+                overflow: hidden;
+                @at-root #{&}_list {
+                    position: relative;
+                    text-align: right;
+                    height: 36px;
+                    button {
+                        width: 32px;
+                        height: 32px;
+                        line-height: 32px;
+                        font-size: 14px;
+                        padding: 0;
+                        margin: 0 2px;
+                        border-radius: 4px;
+                        box-shadow: 0 1px 1px #00000057;
+                    }
+                }
+            }
+        }
+    }
+}
+.bigClass {
+    color: #e5283b !important;
+}
+.smallClass {
+    color: #272d94 !important;
+}
+.singleClass {
+    color: #1bbe2c !important;
+}
+.doubleClass {
+    color: #ff6a00 !important;
+}

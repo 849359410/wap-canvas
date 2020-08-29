@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" id="addLogo">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@2.2/lib/index.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,minimal-ui">
+	<title id="web_title_id"></title>
+	<!-- 使用CDN的JS文件 -->
+	<% for (var i in htmlWebpackPlugin.options.cdn && htmlWebpackPlugin.options.cdn.js) { %>
+	<script src="<%= htmlWebpackPlugin.options.cdn.js[i] %>"></script>
+	<% } %>
+	<script src="https://static.cloudywoo.com/api/egVideo.js"></script>
+</head>
+<body>
+<div id="app"></div>
+<!-- built files will be auto injected -->
+</body>
+</html>

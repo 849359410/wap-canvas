@@ -1,0 +1,19 @@
+.playList{
+	position: absolute;
+	top: 44px;
+	right: 0;
+	background-color: #333333;
+	z-index: 31;
+	color: #ffffff;
+	width: 50%;
+	@at-root #{&}-row {
+		@at-root #{&}--col {
+			font-size: 12px;
+			width: 50%;
+			float: left;
+			line-height: 35px;
+			text-align: center;
+			border-bottom: 1px solid #646361;
+		}
+	}
+}

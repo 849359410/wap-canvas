@@ -1,0 +1,35 @@
+@import "../../../../assets/css/mixins/mixin";
+.LotteryCountdown {
+	@at-root #{&}-row {
+		font-size: 15px;
+		color: #333333;
+		.details_period {
+			font-size: 12px;
+			@include fontColor(#666);
+		}
+		.details_text {
+			margin-right: 20px;
+			text-align: right;
+			.times {
+				@include fontColor();
+				font-size: 15px;
+				letter-spacing: inherit;
+				font-weight: inherit;
+			}
+		}
+	}
+}
+.countdown {
+	margin-left: 10px;
+	.times {
+		color: #63b7ff!important;
+		line-height: 30px;
+	}
+}
+.fastHead-coun {
+	display: inline-block;
+	margin-left: 10px;
+	.times {
+		color: #63b7ff !important;
+	}
+}

@@ -1,0 +1,127 @@
+@import "../mixins/mixin";
+.head{
+    z-index: 2;
+    height: 44px;
+    @include bgColor();
+    div{
+        font-size: 18px;
+    }
+    .left{
+        i{
+            font-size: 16px;
+        }
+    }
+    .center {
+        p {
+            color: #fff;
+        }
+    }
+    .right{
+        i{
+            font-size: 24px;
+            margin-right: 10px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+    }
+}
+.van-overlay {
+    background-color: rgba(0,0,0,.3);
+}
+.tabTitle{
+    span {
+        display: inline-block;
+        width: 90px;
+        line-height: 26px;
+        font-size: 13px;
+        text-align: center;
+        @include bgColor();
+        border-radius: 4px;
+        color: #ffffff;
+        border: 1px solid #ffffff;
+        box-sizing: border-box;
+        &.active{
+            background: #ffffff;
+            @include fontColor();
+        }
+        &:first-child{
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        &:last-child{
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+}
+.navRight {
+    height: 24px;
+    .right_menu{
+        width: 150px !important;
+        z-index: 10;
+        right: 10px;
+        top: 54px;
+        position: fixed;
+        border-radius: 10px;
+        .van-cell__left-icon {
+            margin-right: 10px;
+        }
+        div {
+            height: 40px;
+            font-size: 14px;
+          color: #333333;
+            img {
+                width: 16px;
+            }
+        }
+      div:after {
+        left: 10px;
+        right: 10px;
+      }
+        div:first-child {
+            border-radius: 5px 5px 0 0;
+        }
+        div:last-child {
+            border-radius: 0 0 5px 5px;
+        }
+    }
+    .popover__arrow {
+        width: 15px;
+        height: 15px;
+        top: 54px;
+        margin-left: 10px;
+        border-radius: 0;
+        position: absolute
+    }
+    .circle {
+        display: inline-block;
+        padding-right: 5px;
+        float: initial;
+        margin-top: -5px;
+        i {
+            width: 4px;
+            display: inline-block;
+            height: 5px;
+            border-radius: 50%;
+            background: #fff;
+            margin: 2px;
+        }
+    }
+}
+.singRight{
+    font-size: 12px;
+    color: #ffffff;
+    margin-right: 10px;
+}
+.planList {
+    float: left;
+    font-size: 12px;
+    padding: 0 4px;
+    height: 20px;
+    margin-right:5px;
+    line-height: 20px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    color: #fff;
+    border: 1px solid #ffffff;
+}

@@ -1,0 +1,214 @@
+@import "../../mixins/mixin";
+.result_main--number {
+    font-size: 13px;
+
+    .timeTime_content {
+        overflow: hidden;
+
+        .left {
+            float: left;
+        }
+
+        .right {
+            float: right;
+
+            i {
+                width: 18px;
+                height: 18px;
+                line-height: 26px;
+                padding: 5px;
+                border-radius: 3px;
+                font-style: normal;
+                margin-left: 5px;
+                background: #ffede6;
+
+                &:first-of-type {
+                    background: #d5f9e7;
+                }
+
+                &:nth-child(2) {
+                    background: #f1ebff;
+                }
+            }
+        }
+    }
+
+    .luckyList {
+        span {
+            background-color: #ffffff;
+            color: #666666;
+            width: 18px;
+            font-size: 12px;
+            height: 18px;
+            line-height: 18px;
+            border: 1px solid #dddddd;
+            border-radius: inherit;
+        }
+    }
+
+    .sixLottery {
+        p {
+            &.sixNumber {
+                span {
+                    &:last-child {
+                        &:before {
+                            content: "+";
+                            position: absolute;
+                            top: 0;
+                            left: -14px;
+                            color: #333333;
+                        }
+                    }
+                }
+            }
+
+            span {
+                position: relative;
+
+                &:last-child {
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+
+    div {
+        p {
+            &.zodiac {
+                span {
+                    background-color: #ffffff !important;
+                    color: #333333;
+                    border-radius: inherit;
+                    border: 1px solid #eeeeee;
+                    margin: 1px;
+                }
+            }
+
+            span {
+                font-size: 12px;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                text-align: center;
+                line-height: 20px;
+                background-color: #ff5b60;
+                border-radius: 50%;
+                color: #ffffff;
+                margin: 2px;
+
+                &.red {
+                    @include bgColor();
+                }
+
+                &.blue {
+                    background-color: #0099cc;
+                }
+
+                &.green {
+                    background-color: #33cc66;
+                }
+
+                &.other {
+                    background-color: #999999;
+                }
+            }
+        }
+    }
+
+    .fast_three_history_div {
+        display: flex !important;
+
+        .fast_three_history_p1 {
+            &.zodiac {
+                span {
+                    background-color: #ffffff !important;
+                    color: #333333;
+                    border-radius: inherit;
+                    border: 1px solid #eeeeee;
+                    margin: 1px;
+                }
+            }
+
+            span {
+                font-size: 12px;
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                text-align: center;
+                line-height: 20px;
+                background-color: #ff5b60;
+                border-radius: 50%;
+                color: #ffffff;
+                margin: 2px;
+
+                &.red {
+                    @include bgColor();
+                }
+
+                &.blue {
+                    background-color: #0099cc;
+                }
+
+                &.green {
+                    background-color: #33cc66;
+                }
+
+                &.other {
+                    background-color: #999999;
+                }
+            }
+        }
+
+        .fast_three_history_p2 {
+            position: absolute;
+            right: 0;
+            display: inline-flex;
+
+            span {
+                font-size: 12px;
+                min-width: 20px;
+                height: 20px;
+                text-align: center;
+                line-height: 20px;
+                background-color: #ff5b60;
+                border-radius: 3px;
+                color: #ffffff;
+                margin: 0 5px;
+            }
+
+            span:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .bigColor {
+        background-color: #8bbf2b !important;
+    }
+
+    .smallColor {
+        background-color: #747cff !important;
+    }
+
+    .singleColor {
+        background-color: #e070fd !important;
+    }
+
+    .doubleColor {
+        background-color: #ff9c5c !important;
+    }
+
+    .leopard {
+        width: 33px;
+        background-color: #a73dff !important;
+    }
+
+    .numerical {
+        background-color: #ff6868 !important;
+    }
+    .fast_three_history_p2 {
+        span {
+            color: #ffffff!important;
+        }
+    }
+}

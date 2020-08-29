@@ -1,0 +1,91 @@
+@import "../../../../assets/css/mixins/mixin";
+.betting_list {
+	@include bgColor(#f4f4f4);
+	padding:0 10px 10px 10px;
+	height: 100%;
+	@at-root #{&}_details{
+		height: 96px;
+		padding: 0 10px;
+		margin-bottom: 10px;
+		@include bgColor(#ffffff);
+		position: relative;
+		border-radius: 2px;
+		box-shadow: 0 1px 16px 0 rgba(0,0,0,0.08);
+		&:last-child{
+			margin-bottom: 30px;
+		}
+		@at-root #{&}--logo{
+			height: 40px;
+			padding: 10px 0;
+			.img{
+				float: left;
+				width: 40px;
+				height: 40px;
+				margin-right: 10px;
+				border-radius: 50%;
+			}
+			@at-root #{&}-p{
+				margin: 15px 0;
+			}
+			/deep/ .LotteryCountdown {
+				.LotteryCountdown-row {
+					.details_period {
+						line-height: 20px;
+					}
+					.details_text {
+						line-height: 20px;
+						.van-count-down {
+							font-size: 14px !important;
+						}
+					}
+					.countdown {
+						@include fontColor();
+						margin-left: 45px;
+						font-size: 14px;
+					}
+				}
+
+			}
+			.col{
+				font-size: 14px;
+				color: #333333;
+				display: inline-block;
+				&.details_text{
+					float: right;
+					margin-right: 20px;
+					text-align: right;
+					color: #333333;
+				}
+			}
+			.van-icon {
+				position: absolute;
+				right: 3%;
+				top: 32%;
+				opacity: 0.3;
+			}
+		}
+		i.right{
+			position: absolute;
+			top: 26px;
+			right: 10px;
+			font-size: 12px;
+		}
+	}
+	.noLottery{
+		text-align: center;
+		font-size: 14px;
+		@include fontColor(#636363);
+		div{
+			&:first-of-type{
+				margin-top: 70px;
+			}
+			&:last-of-type{
+				margin-top: 20px;
+			}
+			img{
+				width: 121px;
+				height: 80px;
+			}
+		}
+	}
+}

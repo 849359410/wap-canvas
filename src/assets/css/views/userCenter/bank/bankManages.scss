@@ -1,0 +1,155 @@
+$bank: "../../../assets/images/userCenter/bank/47.jpg";
+@import "../../../mixins/mixin";
+.bankManages{
+    .bankBox{
+        position: absolute;
+        overflow-y: auto;
+        padding-bottom:.5rem;
+        width: 100%;
+        background: #f4f4f4;
+        @at-root #{&}--haveDate{
+            .addBankBut{
+                margin: 10px!important;
+            }
+            @at-root #{&}_p {
+                font-size: 14px;
+                padding: 0 10px;
+                span {
+                    @include fontColor();
+                }
+            }
+            @at-root #{&}_title{
+                font-size: 18px;
+                color: #333;
+                margin: 20px 15px 0;
+                font-family: 'PingFang-SC-Medium';
+            }
+            @at-root #{&}_bankList{
+                width: 94%;
+                margin: 15px auto;
+                padding: 0;
+                @at-root #{&}-li{
+                    background: #fff;
+                    border-radius: 4px;
+                    border: 1px solid #dedede;
+                    box-shadow: 0 2px 10px 0 rgba(153,153,153,.5);
+                    list-style: none;
+                    margin-bottom: 10px;
+                    @at-root #{&}__bank{
+                        font-size: 14px;
+                        color: #999;
+                        line-height: 1.2rem;
+                        font-family: "Microsoft YaHei";
+                        width: 90%;
+                        margin: 0 auto;
+                        border-bottom: 1px solid #eee;
+                        i {
+                            img {
+                                width: 2.8rem;
+                                height: 2.8rem;
+                                margin-top: -12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @at-root #{&}--content{
+            @at-root #{&}_p {
+                font-size: 14px;
+                padding: 10px;
+                span {
+                    color: red;
+                }
+            }
+            @at-root #{&}_addBank{
+                width: 94%;
+                height: 2.5rem;
+                line-height: 2.5rem;
+                text-align: center;
+                font-size: 1rem;
+                margin: .2rem auto;
+                background: #fff;
+                border: 1px dashed #ccc;
+                border-radius: 4px;
+            }
+            @at-root #{&}_chose{
+                width: 94%;
+                margin: 15px auto;
+                background: #fff;
+                border-radius: 4px;
+                box-shadow: 0px 2px 10px 0px rgba(153,153,153,.5);
+                ul{
+                    padding: 0;
+                    margin: 0;
+                }
+                li{
+                    width: 94%;
+                    height: 2.2rem;
+                    list-style: none;
+                    line-height: 2.2rem;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    border-bottom: 1px solid #EEEEEE;
+                    font-size: 13px;
+                    &:first-child{
+                        div{
+                            position: relative;
+                            p{
+                                &:last-child{
+                                    font-size: 14px;
+                                    color: #000000;
+                                    &:after{
+                                        content: '';
+                                        display: inline-block;
+                                        position: absolute;
+                                        right: .3rem;
+                                        top: 0.78rem;
+                                        width: 8px;
+                                        height: 8px;
+                                        border-top: 1px solid #656565;
+                                        border-right: 1px solid #656565;
+                                        transform: rotate(45deg);
+                                        -webkit-transform: rotate(45deg);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:last-child{
+                        border-bottom: none;
+                    }
+                    input{
+                        border: none;
+                        font-size: 12px!important;
+                        color: #757575!important;
+                    }
+                    div{
+                        p{
+                            float: left;
+                            &:first-child{
+                                width: 23%;
+                            }
+                            &:last-child{
+                                width: 76%;
+                            }
+                        }
+                        i{
+                            margin-left: 1.3rem;
+                        }
+                    }
+                }
+
+            }
+            @at-root #{&}_comfirmUpdate{
+                text-align: center;
+                border-radius: 4px;
+                color: #fff;
+                line-height: 40px;
+                font-size: 18px;
+                margin: 2rem .35rem;
+                background: linear-gradient(90deg,#ffba00,#ef384a);
+            }
+        }
+    }
+}

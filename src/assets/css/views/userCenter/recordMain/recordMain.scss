@@ -1,0 +1,221 @@
+$divFa1: PingFang-SC-Regular;
+$divFa2: PingFang-SC-Medium;
+$divFa3: PingFang-SC-Semibold;
+$divCol1: #333;
+$divCol2: #666666;
+$divCol3: #000000;
+$divCol4: #ff5e00;
+@import "../../../mixins/mixin";
+.search-content {
+    z-index: 1;
+    background: #eee;
+    padding: 5px 5px;
+    .search-wrapper {
+        height: 50px;
+        line-height: 50px;
+        background: #fff;
+        padding: 10px 2%;
+    }
+}
+.main-bottom {
+    margin-bottom: 0 !important;
+}
+.main-content {
+    margin-top: 10px;
+    width: 100%;
+    margin-bottom: 50px;
+    position: absolute;
+    top: 44px;
+    overflow-y: auto;
+    bottom: 0;
+    /deep/ .van-collapse-item__content {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .list--ins {
+        overflow: hidden;
+        background: #ffffff;
+        margin-bottom: 10px;
+        box-shadow: 0 -2px 10px 0 rgba(153, 153, 153, 0.2), 0 2px 10px 0 rgba(153, 153, 153, 0.2);
+        /deep/ .van-cell:after {
+            border: none;
+        }
+        /deep/ .van-cell {
+            padding-bottom: 10px;
+            padding-top: 10px;
+            i {
+                margin-left: -2.33333vw;
+                margin-top: 10px;
+            }
+        }
+        .caipiao-info {
+            float: left;
+            font-size: 12px;
+            width: 95%;
+            position: relative;
+            .info_text {
+                line-height: 1.33rem;
+                font-family: $divFa1;
+                overflow: hidden;
+                .result {
+                    float: right;
+                    b {
+                        @include fontColor();
+                    }
+                }
+                .capital {
+                    text-transform: uppercase;
+                }
+                &:nth-child(1) {
+                    span {
+                        &:nth-child(1) {
+                            font-family: $divFa1;
+                            color: #000000;
+                            font-weight: 400;
+                        }
+                        &:nth-child(2) {
+                            font-family: $divFa2;
+                        }
+                    }
+                }
+                &:nth-child(2) {
+                    .term-time {
+                        color: $divCol2;
+                    }
+                    .time-ag {
+                        display: inline-grid;
+                        color: $divCol2;
+                    }
+                    .result-money {
+                        color: $divCol3;
+                        float: right;
+                    }
+                    .money-ag {
+                        margin-top: 8px;
+                    }
+                    .result-money-img {
+                        width: 40px;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .load-more {
+                position: absolute;
+                top: 13px;
+                right: -20px;
+                font-size: 1rem;
+                color: #999;
+            }
+        }
+        .other-info {
+            margin: 5px 0 10px 0;
+            font-size: 12px;
+            width: 99%;
+            background: #fefceb;
+            border: 0.5px solid #ececec;
+            border-radius: 4px;
+            .doTips {
+                line-height: 24px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+            div {
+                width: 95%;
+                margin-left: 2%;
+                word-break: break-all;
+                line-height: 36px;
+                border-bottom: 0.5px dashed #cfcfcf;
+                .term {
+                    font-family: $divFa1;
+                    color: $divCol2;
+                }
+                .money_style {
+                    color: #ff5e00 !important;
+                }
+                .youhui {
+                    color: $divCol4 !important;
+                }
+                &.term-lists {
+                    display: flex;
+                    :nth-child(1), :nth-child(2) {
+                        color: $divCol3;
+                    }
+                    span {
+                        flex: 1;
+                    }
+                }
+                &.odds {
+                    color: $divCol3;
+                }
+                &.order_model {
+                    span {
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+                &:last-child {
+                    border-bottom: none;
+                }
+                &.kjResult {
+                    em {
+                        color: $divCol4;
+                    }
+                }
+                span {
+                    font-size: 12px;
+                    b {
+                        font-family: $divFa2;
+                        color: #0089ff!important;
+                    }
+                }
+            }
+            .down-money {
+                em {
+                    color: $divCol4;
+                }
+            }
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .rtips {
+        text-align: center;
+    }
+}
+.icon-xiajiantou {
+    font-size: 1.5rem !important;
+}
+.xiajiantou:before {
+    content: "\E603";
+}
+.shangjiantou:before {
+    content: "\E604";
+}
+.zuoyoujiantou {
+    content: "\e611";
+}
+.blue {
+    color: #15a0f0;
+}
+.green {
+    color: green;
+}
+.red {
+    @include fontColor();
+}
+.getOk {
+    @include fontColor();
+}
+.redNo {
+    color: #ff7800;
+}
+.cancel {
+    color: $divCol2;
+}
+em {
+    font-style: normal !important;
+}

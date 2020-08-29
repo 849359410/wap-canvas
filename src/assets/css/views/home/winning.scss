@@ -1,0 +1,122 @@
+@import "../../mixins/mixin.scss";
+$head-img: "../../assets/images/index/winning.png";
+$head-position: (
+    1: -5px -5px,
+    2: -45px -5px,
+    3: -88px -5px,
+    4: -132px -5px,
+    5: -5px -46px,
+    6: -45px -46px,
+    7: -88px -46px,
+    8: -129px -46px,
+    9: -5px -87px,
+    10: -45px -87px,
+    11: -88px -87px,
+    12: -132px -87px,
+    13: -5px -130px,
+    14: -46px -130px,
+    15: -88px -130px,
+    16: -130px -130px,
+    17: -5px -170px,
+    18: -46px -170px,
+    19: -88px -170px,
+    20: -130px -170px
+);
+.indexPage--tabs{
+    background-color: #fff;
+    text-align: left;
+    position: relative;
+    margin-top: 10px;
+    .topBorder{
+        border-bottom: 1px solid #dfdfdf;
+        width: 100%;
+    }
+    @at-root #{&}_tabsList{
+        span{
+            display: inline-block;
+            font-size: 13px;
+            margin: 7px 10px;
+            text-indent: 10px;
+            height: 20px;
+            line-height: 20px;
+            border-left: 4px solid #ef384a;
+            font-weight: 500;
+            color: #333333;
+        }
+    }
+}
+.indexPage--winning {
+    background-color: #fff;
+    position: relative;
+    box-sizing: border-box;
+    @at-root #{&}_rows {
+        width: 100%;
+        max-height: 255px;
+        transition: all 0.5s;
+        margin-top: 0;
+        position: relative;
+        top: 0;
+        overflow: hidden;
+        @at-root #{&}_clearfix {
+            height: 50px;
+            border-bottom: 1px dashed #dfdfdf;
+            .rightMoney {
+                float: right;
+                width: 44%;
+                line-height: 50px;
+                font-size: 14px;
+                text-align: left;
+                color: #333333;
+                a{
+                    color: #ff0000;
+                }
+            }
+            @at-root #{&}_left {
+                float: left;
+                width: 56%;
+                @each $i, $left in $head-position {
+                    .headImg {
+                        float: left;
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 50%;
+                        margin: 7px;
+                        background-position: -46px -130px;
+                        background-size: 470%;
+                        display: inline-block;
+                    }
+                    .winnImg_#{$i} {
+                        background-position: $left;
+                    }
+                }
+                img {
+                    width: 30px;
+                    height: 30px;
+                    vertical-align: text-top;
+                    float: left;
+                    border-radius: 50%;
+                    margin: 10px;
+                }
+                .lottery_name {
+                    span {
+                        font-size: 14px;
+                        color: #333333;
+                        line-height: 50px;
+                    }
+                }
+                p {
+                    font-size: 12px;
+                    color: #666666;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}
+.noneData{
+    background-color: #ffffff;
+    font-size: 12px;
+    line-height: 32px;
+    text-align: center;
+    color: #333333;
+}

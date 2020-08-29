@@ -1,0 +1,145 @@
+.middle_contentBox {
+    margin-top: 44px;
+    .recharge_online {
+        background: white;
+        .online_middle {
+            overflow: hidden;
+            .online_box {
+                border-bottom: 0.5px solid #d8d8d8;
+                height: 40px;
+                line-height: 40px;
+                padding: 0 15px;
+                display: flex;
+                justify-content: space-between;
+                div:first-of-type {
+                    font-size: 12px;
+                    color: #333333;
+                    span {
+                        color: #555555;
+                    }
+                }
+                div:last-of-type {
+                    font-size: 12px;
+                    .copy {
+                        font-size: 12px;
+                        display: inline-block;
+                        text-align: center;
+                        height: 22px;
+                        line-height: 22px;
+                        width: 44px;
+                        border: 1px solid #ff6600;
+                        color: #ff6600;
+                        border-radius: 4px;
+                    }
+                }
+            }
+        }
+        .online_money {
+            border-bottom: 0.5px solid #d8d8d8;
+            .setMoney_title {
+                span {
+                    color: #ff0019;
+                }
+            }
+        }
+    }
+    .van-cell__title {
+        font-size: 12px;
+        .bankLogo {
+            vertical-align: sub;
+            margin: auto 5px;
+            img {
+                width: 17px;
+            }
+        }
+    }
+    .scanCode_container {
+        .recharge_scanCode {
+            background: white;
+            .scanCode_box {
+                div:first-of-type {
+                    font-size: 12px;
+                    color: #333333;
+                }
+                div:last-of-type {
+                    font-size: 12px;
+                    .copy {
+                        font-size: 12px;
+                        display: inline-block;
+                        text-align: center;
+                        height: 22px;
+                        line-height: 22px;
+                        width: 42px;
+                        border: 1px solid #ff6600;
+                        color: #ff6600;
+                        border-radius: 4px;
+                    }
+                }
+            }
+            .scanCode_boxTow {
+                border-bottom: 1px solid #ebedf0;
+                height: 40px;
+                line-height: 40px;
+                padding: 0 15px;
+                display: flex;
+                justify-content: flex-start;
+                div:first-of-type {
+                    font-size: 12px;
+                    color: #333333;
+                    span {
+                        display: inline-block;
+                        padding-left: 24px;
+                    }
+                }
+                div:last-of-type {
+                    font-size: 12px;
+                    flex: 1;
+                    input {
+                        border: none;
+                        width: 100%;
+                        vertical-align: middle;
+                        line-height: 25px;
+                    }
+                }
+            }
+        }
+        .tow_code {
+            background: white;
+            width: 100%;
+            margin: 10px 0 0 0;
+            padding: 15px 0;
+            text-align: center;
+            img {
+                width: 130px;
+                height: 130px;
+                -webkit-user-select: text;
+                -webkit-touch-callout: default;
+            }
+        }
+    }
+    .setMoneyr_submyOrder {
+        text-align: center;
+        padding: 20px 10px;
+        button {
+            font-size: 18px;
+            display: inline-block;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 6px;
+            background: linear-gradient(to right, #efb200, #ef384a);
+            color: #fff;
+            outline: none;
+            border: none;
+            padding: 0;
+            margin: 0;
+        }
+    }
+}
+.bank_img {
+    height: 20px;
+    width: auto;
+    margin-right: 6px;
+    display: inline-block;
+    vertical-align: middle;
+}

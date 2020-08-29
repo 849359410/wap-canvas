@@ -1,0 +1,182 @@
+@import "../../../mixins/mixin";
+.quotaConversion {
+    width: 100%;
+    height: 100%;
+    padding-top: 10px;
+    @at-root #{&}-top {
+        width: 94%;
+        border-radius: 8px;
+        @include bgColor(#fff);
+        box-shadow: 2px 2px 10px rgba(0,0,0, 0.2);
+        margin: auto;
+        @at-root #{&}--quota {
+            padding-top: 25px;
+            padding-bottom: 25px;
+            width: 100%;
+            position: relative;
+            border-bottom: 1px dashed #ccc;
+            .van-row {
+                height: 34px;
+                width: 86%;
+                margin: auto;
+                .van-col {
+                    height: 100%;
+                    font-size: 14px;
+                    line-height: 34px;
+                    .van-image {
+                        width: 26px;
+                        height: 26px;
+                        vertical-align: middle;
+                    }
+                    span {
+                        padding-left: 8px;
+                        padding-right: 8px;
+                        font-size: 14px;
+                        @include fontColor(#333);
+                    }
+                    .van-icon {
+                        font-size: 14px;
+                        color: #999;
+                        vertical-align: middle;
+                    }
+                }
+                .van-col:nth-child(2) {
+                    .van-image {
+                        width: 18px;
+                        height: 18px;
+                        margin-left: 26%;
+                        vertical-align: middle;
+                    }
+                }
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                @include bgColor();
+                border-radius: 50%;
+                bottom: -8px;
+                margin-left: -8px;
+            }
+            &:before {
+                content: "";
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                @include bgColor();
+                border-radius: 50%;
+                right: 0;
+                bottom: -8px;
+                margin-right: -8px;
+            }
+        }
+        @at-root #{&}--money {
+            .van-row {
+                width: 86%;
+                margin: auto;
+                height: 100%;
+                padding-top: 8px;
+                .van-col {
+                    font-size: 14px;
+                    @include fontColor(#333);
+                    em {
+                        @include fontColor();
+                        font-style: normal;
+                    }
+                    .van-cell-group {
+                        border: none;
+                        display: flex;
+                        .van-cell {
+                            padding-right: 0;
+                            padding-top: 8px;
+                            padding-bottom: 8px;
+                            @include bgColor(#f4f4f4);
+                        }
+                        span {
+                            display: inline-block;
+                            font-size: 14px;
+                            color: #c38220;
+                            line-height: 24px;
+                            @include bgColor(#f4f4f4);
+                            width: 48px;
+                            text-align: center;
+                            padding: 8px 10px;
+                        }
+                    }
+                }
+                .van-col:first-child {
+                    font-size: 12px;
+                }
+                .van-col:nth-child(2) {
+                    margin-top: 10px;
+                }
+                .van-col:nth-child(3) {
+                    text-align: center;
+                    padding: 18px 0;
+                    img {
+                        width: 50px;
+                        height: 18px;
+                    }
+                }
+            }
+        }
+    }
+    @at-root #{&}-content {
+        width: 94%;
+        margin: 10px auto 0 auto;
+        border-radius: 6px;
+        padding: 10px 0 16px 0;
+        box-shadow: 2px 2px 10px rgba(0,0,0, 0.2);
+        @include bgColor(#fff);
+        .van-row {
+            padding: 6px 20px;
+            .van-col {
+                height: 30px;
+                line-height: 30px;
+                @include fontColor(#333);
+            }
+            .van-col:first-child {
+                text-align: left;
+                font-size: 14px;
+                .van-image {
+                    width: 26px;
+                    height: 26px;
+                    vertical-align: middle;
+                    margin-right: 10px;
+                }
+            }
+            .van-col:last-child {
+                text-align: right;
+                font-size: 14px;
+                i {
+                    font-weight: normal;
+                    font-style: normal;
+                    font-size: 12px !important;
+                }
+            }
+        }
+        @at-root #{&}--one {
+            padding: 8px 20px !important;
+            .van-col {
+                font-size: 16px !important;
+                @include fontColor(#333);
+                .van-image {
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+    @at-root #{&}-button {
+        width: 94%;
+        margin: 10% auto 0 auto;
+        background: linear-gradient(90deg,#ffba00,#ef384a);
+        border: none;
+        font-size: 18px;
+    }
+    @media screen and (max-height: 500px) {
+        @at-root #{&}-button {
+            margin: auto;
+        }
+    }
+}

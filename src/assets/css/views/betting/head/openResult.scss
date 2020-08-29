@@ -1,0 +1,151 @@
+$div-border: #dedede;
+$dic-backColor: #f4f4f4;
+$font-color: #707d9d;
+.resultsListSecond {
+	top: 127px;
+}
+.resultsList{
+	position: absolute;
+	width: 100%;
+	z-index: 10;
+	max-height: 276px;
+	overflow: auto;
+	background: #fff;
+	@at-root #{&}_title{
+		background-color: $dic-backColor;
+		line-height: 34px;
+		text-align: center;
+		font-size: 12px;
+		.van-col:first-child{
+			border-right: 1px solid $div-border;
+		}
+		.van-col:nth-child(3), .van-col:nth-child(4), .van-col:nth-child(5){
+			color: #1f1f21!important;
+		}
+	}
+	.van-row{
+		.luckCarList{
+			em{
+				border-radius: 4px!important;
+			}
+		}
+		.van-col{
+			text-align: center;
+			font-size: 12px;
+			line-height: 36px;
+			em{
+				display: inline-block;
+				text-align: center;
+				font-size: 12px;
+				width: 20px;
+				height: 20px;
+				line-height: 20px;
+				color: #ffffff;
+				margin-right: 4px;
+				background-color: #ff8d91;
+				border-radius: 50%;
+				font-style:inherit;
+			}
+			i{
+				font-style: normal;
+				color: #1f1f21;
+			}
+		}
+	}
+	@at-root #{&}_list{
+		.firstChildCol {
+			position: relative;
+			border-right: 1px solid #ccd4e5;
+			&:after{
+				content: "";
+				position: absolute;
+				height: 10px;
+				width: 10px;
+				border-radius: 50%;
+				background-color: #ccd4e5;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				right: -5px;
+			}
+		}
+		background-color: $dic-backColor;
+		&:nth-child(even){
+			background-color: #ffffff;
+		}
+		.happyPeriod{
+			line-height: 60px !important;
+		}
+		@at-root #{&}-lucky{
+			height: 36px;
+			em{
+
+			}
+		}
+		@at-root #{&}_number{
+			height: 60px;
+			line-height: 20px!important;
+			padding-top: 10px;
+			span{
+				width: 100%;
+				display: inline-block;
+				margin-bottom: 4px;
+				&.zodiac{
+					em{
+						background: inherit;
+						color: #000000;
+					}
+				}
+				em{
+					&.green{
+						background: #2cda19!important;
+					}
+					&.red{
+						background: #dd3e3e!important;
+					}
+					&.blue{
+						background: #1379d7!important;
+					}
+				}
+			}
+		}
+		.sixLottery{
+			p{
+				span{
+					&:first-child{
+						em{
+							position: relative;
+							&:last-child{
+								margin-left: 14px;
+								&:before{
+									content: '+';
+									position: absolute;
+									top: 0;
+									left: -14px;
+									color: #333333;
+								}
+							}
+						}
+					}
+					&:last-child em{
+						background-color: #ffffff;
+						color: #333333;
+						border-radius: inherit;
+						border: 1px solid #EEEEEE;
+						margin: 1px;
+						&:last-child{
+							margin-left: 14px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.maskResultsList {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		z-index: 9;
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+}

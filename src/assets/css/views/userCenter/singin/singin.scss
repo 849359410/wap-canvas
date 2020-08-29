@@ -1,0 +1,467 @@
+$selOkMoney: "../../../assets/images/userCenter/singin/newEdition/head.png";
+$bg: "../../../assets/images/userCenter/singin/newEdition/bg.png";
+$data: "../../../assets/images/userCenter/singin/newEdition/data.png";
+$Notavailable: "../../../assets/images/userCenter/singin/newEdition/notavailable.png";
+$Claimable: "../../../assets/images/userCenter/singin/newEdition/claimable.png";
+$Lotteryhall: "../../../assets/images/userCenter/singin/newEdition/lotteryhall.png";
+$chatroom: "../../../assets/images/userCenter/singin/newEdition/chatroom.png";
+$MasterPlan: "../../../assets/images/userCenter/singin/newEdition/masterPlan.png";
+$SignPop: "../../../assets/images/userCenter/singin/newEdition/signPop.png";
+$WinningsPop: "../../../assets/images/userCenter/singin/newEdition/winningsPop.png";
+.inside {
+    background-color: #f9f9f9;
+    width: 100%;
+    overflow: hidden;
+    @at-root #{&}--contentOne {
+        background: url($bg) no-repeat;
+        background-size: 100% 100%;
+        height: 140px;
+        overflow: hidden;
+        @at-root #{&}_box {
+            width: 80%;
+            margin: 20px auto 0;
+            .dayInfo {
+                font-size: 16px;
+                color: #fdfdfd;
+                text-align: center;
+                line-height: 43px;
+                letter-spacing: 2px;
+                span {
+                    background: url($data)
+                    no-repeat;
+                    background-size: 100% 100%;
+                    display: inline-block;
+                    width: 35px;
+                    height: 40px;
+                    font-size: 26px;
+                    color: #d22a34;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                }
+            }
+            .moreDay {
+                color: #ffffff;
+                font-size: 12px;
+                height: 28px;
+                background-color: #d22a34;
+                border-radius: 14px;
+                text-align: center;
+                margin: 16px auto 0;
+                line-height: 28px;
+                img {
+                    width: 16px;
+                    height: 16px;
+                    position: relative;
+                    top: 3px;
+                }
+                .dayMoney {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    @at-root #{&}--contentTwo {
+        background: #ffffff;
+        padding-bottom: 20px;
+        @at-root #{&}_box {
+            width: 94%;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 10px;
+            .OuterLay:nth-child(7n)::after {
+                border: none;
+            }
+            .OuterLay:last-child::after {
+                border: none;
+            }
+            .OuterLay:after {
+                content: "";
+                height: 1px;
+                width: 60%;
+                border-bottom: 1px solid #d8d8d8;
+                position: relative;
+                top: -37px;
+                left: 37px;
+                display: block;
+            }
+            .OuterLayRed:after {
+                content: "";
+                height: 1px;
+                width: 60%;
+                border-bottom: 1px solid #d22a34;
+                position: relative;
+                top: -37px;
+                left: 37px;
+                display: block;
+            }
+            .OuterLay {
+                display: inline-block;
+                flex: 1;
+                width: calc(100% / 7);
+                margin-top: 10px;
+                position: relative;
+                .circle {
+                    height: 34px;
+                    width: 34px;
+                    background-color: #d8d8d8;
+                    border-radius: 50%;
+                    margin: 0 auto;
+                    img {
+                        width: 20px;
+                        height: 15px;
+                        display: inline-block;
+                        margin-top: 5px;
+                    }
+                    span {
+                        color: #ffffff;
+                        padding-top: 13px;
+                    }
+                }
+                span {
+                    font-size: 12px;
+                    color: #666666;
+                    text-align: center;
+                    padding-top: 10px;
+                    display: inline-block;
+                }
+                .circleClaimed {
+                    background: -webkit-linear-gradient(#fd5654, #f63740);
+                    background: -o-linear-gradient(#fd5654, #f63740);
+                    background: -moz-linear-gradient(#fd5654, #f63740);
+                    background: linear-gradient(#fd5654, #f63740);
+                    position: relative;
+                    z-index: 1;
+                }
+                .TodayCan {
+                    background: #d22a34;
+                    position: relative;
+                    z-index: 1;
+                }
+            }
+        }
+        .SignNow {
+            text-align: center;
+            border-radius: 20px;
+            color: #ffffff;
+            line-height: 40px;
+            font-size: 14px;
+            margin: 20px 20px 0 20px;
+            background: -webkit-linear-gradient(#fd5654, #f63740);
+            background: -o-linear-gradient(#fd5654, #f63740);
+            background: -moz-linear-gradient(#fd5654, #f63740);
+            background: linear-gradient(#fd5654, #f63740);
+            span {
+                padding-left: 3px;
+                letter-spacing: 2px;
+            }
+        }
+        img {
+            width: 20px;
+            height: 20px;
+            position: relative;
+            top: 4px;
+        }
+        .moreShow {
+            font-size: 14px;
+            text-align: center;
+            color: #333333;
+            padding-top: 10px;
+            font-weight: 600;
+            img {
+                width: 10px;
+                height: auto;
+                position: inherit;
+                padding-left: 5px;
+            }
+        }
+    }
+    @at-root #{&}--contentThree {
+        background: #ffffff;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        @at-root #{&}_box {
+            width: 100%;
+            margin: 0 auto;
+            p {
+                font-size: 16px;
+                color: #333333;
+                padding-left: 10px;
+                padding-top: 14px;
+                padding-bottom: 13px;
+                font-weight: 600;
+            }
+            .list {
+                display: flex;
+                width: 97%;
+                flex-wrap: wrap;
+                margin: 0 auto;
+                .list_Box {
+                    height: 60px;
+                    max-width: 47%;
+                    margin: 0 5px 10px 5px;
+                    display: flex;
+                    flex: 1;
+                    position: relative;
+                    .leftContent {
+                        width: 80%;
+                        p {
+                            font-size: 12px;
+                            color: #666666;
+                            text-align: center;
+                            padding: 0;
+                            font-weight: normal;
+                            margin-top: 6px;
+                            span {
+                                font-size: 16px;
+                            }
+                        }
+                        p:last-child {
+                            width: 130px;
+                            margin: 0 auto;
+                        }
+                        .moneySty {
+                            color: #f32938;
+                        }
+                    }
+                    .rightContent {
+                        width: 20%;
+                        text-align: center;
+                        span {
+                            color: #ffffff;
+                            font-weight: 600;
+                            font-size: 12px;
+                            position: relative;
+                            left: 3px;
+                            top: 10px;
+                        }
+                    }
+                    .ClaimedImg {
+                        position: absolute;
+                        width: 50px;
+                        right: 0;
+                        margin-top: 6px;
+                    }
+                }
+                .NotAvailable {
+                    background: url($Notavailable)
+                    no-repeat;
+                    background-size: 100% 100%;
+                }
+                .Claimable {
+                    background: url($Claimable)
+                    no-repeat;
+                    background-size: 100% 100%;
+                }
+                .oneContent {
+                    margin: 0 auto 10px;
+                }
+            }
+            .inside--rece_more {
+                p {
+                    font-size: 14px;
+                    text-align: center;
+                    color: #333333;
+                    font-weight: 600;
+                    padding-left: 0;
+                    padding-top: 3px;
+                    span {
+                        margin-right: 4px;
+                    }
+                    img {
+                        width: 10px;
+                    }
+                }
+            }
+        }
+    }
+    @at-root #{&}--contentFour {
+        background: #ffffff;
+        margin-top: 10px;
+        @at-root #{&}_box {
+            width: 100%;
+            margin: 0 auto;
+            p {
+                font-size: 16px;
+                color: #333333;
+                padding-left: 10px;
+                padding-top: 14px;
+                padding-bottom: 13px;
+                font-weight: 600;
+            }
+            .list {
+                width: 95%;
+                margin: 0 auto;
+                background: none;
+                .top {
+                    width: 100%;
+                    height: 90px;
+                    background: url($Lotteryhall)
+                    no-repeat;
+                    background-size: 100% 100%;
+                    margin-bottom: 10px;
+                }
+                .left {
+                    width: 48.5%;
+                    height: 90px;
+                    background: url($chatroom)
+                    no-repeat;
+                    background-size: 100% 100%;
+                    float: left;
+                }
+                .right {
+                    width: 48.5%;
+                    height: 90px;
+                    background: url($MasterPlan)
+                    no-repeat;
+                    background-size: 100% 100%;
+                    float: right;
+                }
+                .BTitle {
+                    font-weight: 600;
+                    font-size: 18px;
+                    color: #ffffff;
+                    padding-bottom: 0;
+                }
+                .CTitle {
+                    font-size: 12px;
+                    color: #ffffff;
+                    padding-bottom: 0;
+                    padding-top: 0;
+                    font-weight: normal;
+                }
+                .CTitle:last-child {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+.singSurePopup {
+    background-color: rgba(76,76,76,.1);
+    .top {
+        background: url($SignPop) no-repeat;
+        background-size: 100% 100%;
+        height: 310px;
+        width: 250px;
+        @at-root #{&}_content {
+            position: absolute;
+            bottom: 5px;
+            width: 100%;
+            .title {
+                width: 60%;
+                margin: 0 auto;
+
+                p {
+                    display: inline-block;
+                }
+
+                .title_max {
+                    text-align: center !important;
+                    display: block;
+                }
+
+                .title_one {
+                    font-size: 12px;
+                    color: #ffffff;
+                    text-align: left;
+
+                    span {
+                        font-size: 16px;
+                        color: #ffffff;
+                    }
+                }
+
+                .title_three {
+                    font-size: 22px;
+                    color: #ffffff;
+                    text-align: center;
+                    /*margin: 0 0 20px;*/
+                    width: 100%;
+                }
+            }
+        }
+        .successSign {
+            text-align: center;
+            border-radius: 20px;
+            color: #ff2c43;
+            line-height: 40px;
+            font-size: 14px;
+            margin: 10px 20px 0 20px;
+            background: -webkit-linear-gradient(#feea55, #ffcc16);
+            background: -o-linear-gradient(#feea55, #ffcc16);
+            background: -moz-linear-gradient(#feea55, #ffcc16);
+            background: linear-gradient(#feea55, #ffcc16);
+        }
+        .top_maxDay {
+            text-align: center;
+            font-size: 12px;
+            color: #ffffff;
+            margin: 13px 0 0 0;
+            img {
+                width: 15px;
+                height: 15px;
+                position: relative;
+                top: 3px;
+            }
+        }
+        .sure,
+        .bottom_title {
+            display: block;
+            margin: 0 auto;
+            width: 198px;
+        }
+        .bottom_title {
+            width: 201px;
+            margin: 10px auto 14px;
+        }
+    }
+    .bottom {
+        background-color: rgba(0, 0, 0, 0.48);
+        padding-top: 20px;
+        border: none;
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 20px;
+        }
+    }
+}
+.grade_dig{
+    background-color: rgba(76,76,76,.1);
+    .reve_main {
+        background: url($WinningsPop) no-repeat;
+        background-size: 100% 100%;
+        height: 260px;
+        width: 250px;
+        .rewardMain {
+            position: absolute;
+            top: 31%;
+            left: 0;
+            right: 0;
+            p {
+                text-align: center;
+                font-size: 14px;
+                color: #ffffff;
+            }
+            .rewardMoney {
+                color: #ffffff;
+                font-size: 20px;
+                margin-bottom: 8px;
+                font-weight: 600;
+                span {
+                    font-size: 20px;
+                    margin-left: 5px;
+                }
+            }
+        }
+        .WinningRecords {
+            font-size: 18px;
+            color: #ea124a;
+            position: absolute;
+            bottom: 58px;
+            text-align: center;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+}

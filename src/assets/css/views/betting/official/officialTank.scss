@@ -1,0 +1,66 @@
+$div-border: #dedede;
+$dic-backColor: #f2f5f8;
+$font-color: #707d9d;
+$div-color: #ef384a;
+@import "../../../mixins/mixin";
+.offTake{
+    background-color: #999999;
+    .play_group{
+        background: white;
+        float: left;
+        position: absolute;
+        width: 100%;
+        z-index: 30;
+        border-top: 2px solid #ccc;
+        .lineDebug{
+            padding: 10px 0;
+            .list-item {
+                display: flex;
+            }
+        }
+        .left{
+            border-left: 1px solid #cccccc;
+            font-size: 12px;
+            width: 22%;
+            padding-left: 10px;
+            font-family: 'PingFang SC - Regular';
+            color: #666666;
+            &:after{
+                content: "";
+                position: absolute;
+                height: 7px;
+                width: 7px;
+                border-radius: 50%;
+                background-color: #cccccc;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                left: 11px;
+            }
+        }
+        .center{
+            width: 78%;
+            button{
+                border: none;
+                color: #666666;
+                background-color: #ffffff;
+                padding: 0 10px;
+                line-height: 18px;
+                font-size: 12px;
+                &.active{
+                    border-radius: 10px;
+                    border: 1px solid $div-color;
+                    @include fontColor();
+                }
+            }
+        }
+    }
+    .play_bottom{
+        position: absolute;
+        background-color: rgba(0,0,0,.7);
+        height: 100%;
+        width: 100%;
+        top: 0;
+        z-index: 28;
+    }
+}

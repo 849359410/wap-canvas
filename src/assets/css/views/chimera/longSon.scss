@@ -1,0 +1,21 @@
+.LongSon {
+    .van-list {
+        width: 100%;
+        padding: 0;
+        position: absolute;
+        left: 0;
+        top: 40px;
+        bottom: 85px;
+        background: #f4f4f4;
+        overflow-y: auto;
+        margin-top: 4px;
+        .van-cell {
+            overflow: hidden;
+            margin: 10px 0;
+            background: white;
+            padding: 10px;
+            border-radius: 2px;
+            box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.08);
+        }
+    }
+}

@@ -1,0 +1,33 @@
+@import "../../mixins/mixin";
+.longRule {
+    background: white;
+    height: 100%;
+    .long-info {
+        padding: 10px 20px;
+        text-align: left;
+        .content-long {
+            font-size: 14px;
+            padding: 0 10px;
+            p {
+                color: #666666;
+                font-size: 1em;
+                display: block;
+                margin-block-start: 1em;
+                margin-block-end: 1em;
+                margin-inline-start: 0;
+                margin-inline-end: 0;
+            }
+            h3 {
+                font-size: 14px;
+                position: relative;
+                @include fontColor();
+                padding-left: 25px;
+                padding-top: 2px;
+                font-weight: 400;
+            }
+            .noStyle {
+                margin-top: 0;
+            }
+        }
+    }
+}

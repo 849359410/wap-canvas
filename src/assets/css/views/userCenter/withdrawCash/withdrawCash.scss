@@ -1,0 +1,107 @@
+.state {
+    position: absolute;
+    bottom: 20%;
+}
+.withdraw {
+    .van-row {
+        margin-top: 10px;
+    }
+    @at-root #{&}_box {
+        @at-root #{&}_tag {
+            color: #ff6600;
+            background: none;
+        }
+        .bank_img {
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+            margin: 0 5px 0 2px;
+        }
+        .bank_text {
+            background: none;
+            color: #000;
+        }
+        .van-password-input__security {
+            li {
+                border: 1px solid #CFCFCF;
+                margin: 0 0 -1px -1px;
+            }
+        }
+    }
+    @at-root #{&}_remark {
+        /deep/ .van-cell__right-icon {
+            position: absolute;
+            bottom: 10%;
+            right: 18%;
+        }
+        @at-root #{&}_top {
+            color: #f88b44;
+            span {
+                color: #0089ff;
+            }
+        }
+        @at-root #{&}_bottom {
+            span {
+                color: #ff6600;
+            }
+        }
+    }
+    @at-root #{&}_noMoney {
+        width: 90%;
+        margin: 10px auto;
+        @at-root #{&}_noMoneyBox {
+            padding: 10px 5px;
+            background: #fff;
+            text-align: center;
+            p {
+                line-height: 30px;
+                color: #8f8f94;
+            }
+            button {
+                background: #007aff;
+                color: #fff;
+                font-size: 13px;
+                border-radius: 5px;
+                margin-top: 11px;
+            }
+        }
+    }
+    @at-root #{&}_success {
+        width: 70%;
+        padding: 3.2vw;
+        text-align: center;
+        border-radius: 10px;
+        .error {
+            text-align: right;
+        }
+        .green {
+            color: #00d625;
+            font-weight: bold;
+            font-size: 4.26667vw;
+        }
+        .text {
+            color: #999;
+            line-height: 4.8vw;
+            font-size: 3.46667vw;
+        }
+        button {
+            width: 100%;
+            border-radius: 6px;
+            font-size: 4vw;
+            color: #888;
+            margin-top: 10px;
+        }
+    }
+    .setMoneyr_submyOrder {
+        text-align: center;
+        padding: 0 10px;
+        button {
+            font-size: 18px;
+            width: 100%;
+            border-radius: 6px;
+            background: linear-gradient(to right, #efb200, #ef384a);
+            color: #fff;
+            margin: 20px 0 20px 0;
+        }
+    }
+}

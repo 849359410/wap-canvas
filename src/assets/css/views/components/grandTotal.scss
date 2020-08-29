@@ -1,0 +1,44 @@
+@import "../../mixins/mixin";
+.grandTotal {
+  border-radius: 4px;
+  background: #ffffff;
+  font-size: 12px;
+  text-align: center;
+  @at-root #{&}_head {
+    color: #333333;
+    font-weight: bold;
+    line-height: 30px;
+    padding-top: 10px;
+  }
+  @at-root #{&}_main {
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 10px;
+    p {
+      line-height: 25px;
+      color: #666666;
+      span {
+        @include fontColor(#fa201a);
+      }
+    }
+  }
+  @at-root #{&}_foot {
+    line-height: 40px;
+    font-size: 14px;
+  }
+  .one {
+    p {
+      width: 49.5%;
+      display: inline-block;
+      &:first-child {
+        border-right: 1px solid #dddddd;
+      }
+      &:last-child {
+        @include fontColor(#006bff);
+      }
+    }
+  }
+  .two {
+    @include fontColor(#006bff);
+    width: 100%;
+  }
+}

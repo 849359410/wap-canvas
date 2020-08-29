@@ -1,0 +1,96 @@
+.yuBao {
+    background-color: #fff;
+    height: 100%;
+    @at-root #{&}-top {
+        height: 19%;
+        padding-top: 10px;
+        .van-col {
+            text-align: center;
+            color: #ffffff;
+            span {
+                display: inline-block;
+                font-size: 16px;
+            }
+            .van-icon {
+                font-size: 14px;
+                margin-left: 4px;
+                vertical-align: middle;
+            }
+            p {
+                color: #ffffff;
+                margin: 10px auto 5px;
+            }
+        }
+        @at-root #{&}__profit {
+            p {
+                margin: auto !important;
+                display: inline-block;
+                padding: 4px 16px;
+                background-color: #fff;
+                color: #999 !important;
+                border-radius: 15px;
+                font-size: 12px;
+                span {
+                    font-size: 14px;
+                    color: #ff0000;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    @at-root #{&}-center {
+        background-color: white;
+        .van-col {
+            padding: 10px 0 10px;
+            background-image: none;
+            p {
+                line-height: 14px;
+                font-size: 14px;
+                color: #666666;
+                text-align: center;
+                &.money {
+                    color: #333333;
+                    margin-top: 14px;
+                    font-weight: 600;
+                }
+            }
+            &:first-child {
+                border-right: 1px solid #dddddd;
+            }
+        }
+    }
+    @at-root #{&}-col {
+        height:10px;
+        background-color: #eee;
+    }
+    @at-root #{&}-money {
+        .title_money {
+            line-height: 70px;
+            font-size: 14px;
+            color: #666666;
+            text-indent: 30px;
+            font-weight: 600;
+            background-color: #ffffff;
+        }
+    }
+    @at-root #{&}-footer {
+        height: 44px;
+        .van-row {
+            width: 100%;
+            .van-col {
+                height: 100%;
+                line-height: 42px;
+                text-align: center;
+                font-size: 18px;
+                color: #ff6263;
+                font-weight: 600;
+                background-color: #ffffff;
+                border: 1px solid #ff6263;
+                &.active {
+                    background-color: #ff6263;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}

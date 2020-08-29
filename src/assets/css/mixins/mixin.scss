@@ -1,0 +1,23 @@
+// 站点背景色
+@mixin bgColor($bgColor: #ef384a) {
+	background-color: $bgColor;
+}
+// 字体颜色
+@mixin fontColor($bgColor: #ef384a) {
+	color: $bgColor;
+}
+// 字体 $size：字体大小 $color：字体色 $liHeight：行高 $family：字体 $weight：字体粗细
+@mixin fontFamily($size, $color, $liHeight, $family, $weight) {
+	font-size: $size;
+	color: $color;
+	line-height: $liHeight;
+	font-family: $family, "PingFang SC", "Microsoft Yahei", sans-serif;
+	font-weight: $weight;
+}
+
+@mixin bottom($height, $width, $bgColor, $color) {
+	height: $height;
+	width: $width;
+	background-color: $bgColor;
+	color: $color;
+}

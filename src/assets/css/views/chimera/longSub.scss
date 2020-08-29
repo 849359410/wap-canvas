@@ -1,0 +1,142 @@
+@import "../../mixins/mixin";
+.longSub {
+    .van-image {
+        width: 50px;
+        height: 50px;
+        float: left;
+        margin-right: 1.6px;
+    }
+    .center_content {
+        float: left;
+        margin-left: 10px;
+        div {
+            line-height: 22px;
+            font-family: PingFang SC, Helvetica Neue, Helvetica, Arial, Hiragino Sans GB, Heiti SC,
+            Microsoft YaHei, WenQuanYi Micro Hei, sans-serif;
+            &:first-child {
+                color: #333333;
+                font-size: 14px;
+                font-family: "PingFang SC - Regular", serif;
+            }
+            &:nth-child(2) {
+                color: #999999;
+                font-size: 12px;
+                font-family: "PingFang SC - Regular", serif;
+            }
+            &:nth-child(3) {
+                font-family: "PingFang SC - Medium", serif;
+            }
+            .emColor {
+                .countdown {
+                    font-style: normal;
+                    font-size: 12px;
+                    color: #3e95fe;
+                    font-family: "PingFang SC - Medium", serif;
+                    font-weight: 600;
+                    .van-count-down {
+                        font-size: 12px;
+                        display: inline;
+                        color: #3e95fe;
+                        font-family: "PingFang SC - Medium", serif;
+                        font-weight: 600;
+                    }
+                }
+            }
+            p {
+                color: white;
+                font-size: 12px;
+                border-radius: 8px;
+                background: red;
+                height: 17px;
+                line-height: 18px;
+                text-align: center;
+                float: left;
+                &:nth-child(1) {
+                    width: 50px;
+                }
+                &:nth-child(2) {
+                    width: 24px;
+                    margin-left: 4px;
+                }
+                &:nth-child(3) {
+                    width: 30px;
+                    margin-left: 4px;
+                }
+            }
+            .spanColor {
+                color: #666666;
+                background: #f0f0f0;
+            }
+            .green {
+                background: #1abc65;
+            }
+            .blue {
+                background: #38f;
+            }
+            .red {
+                background: #dc3b40;
+            }
+            .purple {
+                background: #6b73f5;
+            }
+        }
+    }
+    .right_Betting {
+        float: right;
+        display: flex;
+        align-items: center;
+        width: 108px;
+        justify-content: space-between;
+        margin-top: 5px;
+        > div {
+            display: flex;
+            flex-direction: column;
+            width: 48px;
+            height: 48px;
+            margin-right: 5px;
+            justify-content: center;
+            align-items: center;
+            border: 0.5px solid #c5c5c5;
+            border-radius: 4px;
+            > span:first-child {
+                font-family: "PingFang SC - Medium", serif;
+                color: #333333;
+                font-weight: 600;
+                font-size: 14px;
+                height: 14px;
+                margin-bottom: 3px;
+            }
+            > span:last-child {
+                font-family: "PingFang SC - Regular", serif;
+                color: #999999;
+                font-size: 12px;
+            }
+        }
+        > div.active {
+            background: linear-gradient(#ff90af, #ff6568);
+            border: none;
+            > span {
+                color: #ffffff !important;
+            }
+        }
+    }
+    .right_Three {
+        float: right;
+        text-align: center;
+        width: 108px;
+        line-height: 60px;
+        font-size: 14px;
+        a {
+            @include fontColor();
+            text-decoration: none;
+        }
+    }
+    .disable > div {
+        opacity: 0.4;
+    }
+    .disable > div.active {
+        background: #dc3b40;
+        
+        color: #fff !important;
+    }
+}

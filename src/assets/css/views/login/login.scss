@@ -1,0 +1,92 @@
+@import "../../../../assets/css/mixins/mixin";
+.login {
+  width: 100%;
+  height: 100%;
+  @include bgColor();
+  .top {
+    background: repeat;
+    .van-nav-bar__left {
+      i {
+        color: white;
+        font-size: 20px;
+      }
+    }
+  }
+  .top:after {
+    border: none !important;
+  }
+  .login_logo {
+    img {
+      width: 60%;
+      margin: 10% auto;
+      display: block;
+    }
+  }
+  .content {
+    position: absolute;
+    top: 25%;
+    overflow-y: scroll;
+    left: 50%;
+    transform: translate(-50%);
+    width: 86%;
+    height: 60%;
+    background-color: white;
+    border-radius: 1.06667vw;
+    -webkit-box-shadow: 0 0.53333vw 1.06667vw 0 rgba(184, 184, 184, 0.5);
+    box-shadow: 0 0.53333vw 1.06667vw 0 rgba(184, 184, 184, 0.5);
+    padding: 1.86667vw;
+    z-index: 3;
+    margin: 5.86667vw auto 8.53333vw;
+    .verCode {
+      position: relative;
+      img {
+        position: absolute;
+        top: 10%;
+        right: 2%;
+        width: 36%;
+      }
+    }
+    .btm {
+      position: relative;
+      .forget_password {
+        position: absolute;
+        top: 25%;
+        right: 2%;
+        color: #2325ff;
+        font-size: 3.2vw;
+      }
+    }
+    .log_in {
+      margin-top: 10%;
+      .van-button {
+        margin: 0 auto;
+        border-radius: 5px;
+        background-color: #ffba00;
+        border: 1px solid #ffba00;
+        span {
+          font-size: 20px;
+          font-weight: 600;
+        }
+      }
+      .van-button--block {
+        display: block;
+        width: 97%;
+      }
+    }
+    .free_account {
+      margin-top: 5%;
+      .van-button {
+        margin: 0 auto;
+        border-radius: 5px;
+        border: 1px solid #ef384a;
+        @include fontColor();
+        font-size: 20px;
+        font-weight: 600;
+      }
+      .van-button--block {
+        display: block;
+        width: 97%;
+      }
+    }
+  }
+}

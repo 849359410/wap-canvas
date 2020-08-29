@@ -1,0 +1,68 @@
+@import "../../../mixins/mixin";
+.communication {
+  @at-root #{&}_column:nth-child(2) {
+    margin-top: 10px;
+  }
+  @at-root #{&}_column:last-child {
+    margin-bottom: 20px;
+  }
+  .van-notice-bar__content {
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+  }
+  @at-root #{&}_column {
+    position: relative;
+    margin: 0 auto 10px auto;
+    padding: 0 10px;
+    box-shadow: 0 1px 3.2vw 0 rgba(0, 0, 0, 0.08);
+    .van-cell {
+      display: block;
+      padding: 10px 10px 10px 10px;
+      border-radius: 2px;
+      .van-cell__title {
+        span {
+          font-size: 14px;
+          margin-left: 7%;
+        }
+        .van-cell__label {
+          display: inline-block;
+          float: right;
+        }
+      }
+      .van-cell__value {
+        margin-top: 2%;
+        font-size: 12px;
+        text-align: left;
+        color: #333;
+        height: 23px;
+      }
+      .active {
+        height: auto !important;
+      }
+    }
+    i {
+      position: absolute;
+    }
+    .notColor {
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 16px;
+      left: 23px;
+      background: red;
+      border-radius: 50%;
+      z-index: 100;
+    }
+    .okColor {
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 16px;
+      left: 23px;
+      border-radius: 50%;
+      background: #666666;
+      z-index: 100;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+.turnDialog {
+    border-radius: 4px;
+    @at-root #{&}-title {
+        font-size: 14px;
+        text-align: center;
+        font-weight: bold;
+        margin: 0 auto;
+        color: #333333;
+        line-height: 40px;
+        border-bottom: 1px solid #eaeaea;
+    }
+    @at-root #{&}-money {
+        font-size: 14px;
+        text-align: center;
+        line-height: 68px;
+        height: 68px;
+        color: #333333;
+        span {
+            font-size: 28px;
+        }
+    }
+    @at-root #{&}-tips {
+        font-size: 14px;
+        color: #999999;
+        padding: 0 10px;
+        line-height: 40px;
+        text-align: left;
+        border-top: 1px solid #eaeaea;
+        span {
+            display: inline-block;
+        }
+        .right {
+            float: right;
+            color: #333333;
+        }
+    }
+    @at-root #{&}-input {
+        .van-password-input {
+            margin: 0;
+            li {
+                i {
+                    margin: 0;
+                }
+            }
+        }
+        .van-password-input__info {
+            margin: 0;
+            padding: 4px 0;
+        }
+    }
+}

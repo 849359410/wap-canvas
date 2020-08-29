@@ -1,0 +1,26 @@
+.system_notice {
+  .van-list {
+    position: relative;
+    width: 94%;
+    margin: 3% auto;
+    box-shadow: 0 1px 3.2vw 0 rgba(0, 0, 0, 0.08);
+    .van-cell {
+      display: block;
+      .van-cell__title {
+        text-align: center;
+      }
+      .van-cell__value {
+        font-size: 12px;
+        line-height: 16px;
+        text-align: left;
+        height: 30px;
+        word-wrap: break-word;
+        color: #333333;
+      }
+      .active {
+        height: 100%;
+        padding-bottom: 15.5px;
+      }
+    }
+  }
+}

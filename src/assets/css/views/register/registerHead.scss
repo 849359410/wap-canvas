@@ -1,0 +1,78 @@
+.registerhead {
+  height: 304px;
+  background-size: 100% 100%;
+  color: white;
+  z-index: 1;
+  @at-root #{&}_central_area {
+    border-radius: 20px;
+    .van-tabs__wrap {
+      .van-tabs__nav--card {
+        padding: 1px;
+        height: 30px;
+        background: #ffffff;
+        line-height: 1px;
+        border-radius: 20px;
+        margin: 0 auto;
+        border: none !important;
+        .van-tab {
+          width: 52.5%;
+          color: #999999;
+          font-size: 4.26667vw;
+          text-align: center;
+          display: inline-block;
+          line-height: 7.46667vw;
+          font-weight: 400;
+          border-radius: 5.33333vw;
+          margin-top: 1px;
+          margin-left: 1px;
+          margin-right: 1px;
+          border-right: none;
+        }
+        .van-tab--active {
+          color: #fff;
+          @include bgColor();
+        }
+      }
+    }
+  }
+  @at-root #{&}_top {
+    position: absolute;
+    background: repeat;
+    .van-nav-bar__title {
+      width: 66%;
+      color: #fff;
+      max-width: none;
+    }
+    .left {
+      color: white;
+      float: left;
+      font-size: 20px;
+      width: 10%;
+      i {
+        font-size: 30px;
+    }
+  }
+    .right {
+      color: white;
+      width: 10%;
+      font-size: 20px;
+      float: right;
+      i {
+        font-size: 30px;
+    }
+  }
+}
+  @at-root #{&}_top:after {
+    border: none;
+  }
+  div {
+    line-height: 50px;
+    font-size: 18px;
+  }
+}
+.icon-shouye-copy:before {
+  content: "\E60B";
+}
+.toolbar__title {
+  margin-top: 10px;
+}

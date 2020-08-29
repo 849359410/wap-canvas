@@ -1,0 +1,19 @@
+@import "../../mixins/mixin";
+.stopLottery {
+  background: #ffffff;
+  text-align: center;
+  padding-top: 10px;
+  p {
+    line-height: 25px;
+    font-size: 14px;
+    color: #666666;
+    span {
+      @include fontColor();
+    }
+  }
+  .van-image {
+    width: 100%;
+    max-width: 34px;
+    margin: 5px auto 10px;
+  }
+}

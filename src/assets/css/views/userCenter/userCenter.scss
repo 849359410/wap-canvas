@@ -1,0 +1,165 @@
+@import "../../mixins/mixin.scss";
+$back-img: "../../assets/images/userCenter/home/grade.png";
+$reCharge-img: "../../assets/images/userCenter/home/reCharge.png";
+$cash-img: "../../assets/images/userCenter/home/cash.png";
+$singin-img: "../../assets/images/userCenter/home/userCenterSingin.png";
+.userCenter {
+    position: relative;
+    @at-root #{&}--box {
+        position: absolute;
+        top: 0;
+        overflow-y: auto;
+        padding-bottom: 8px;
+        width: 100%;
+        height: 100px;
+        background: rgb(244, 244, 244);
+    }
+    @at-root #{&}--top {
+        padding: 0 11px;
+        color: #fff;
+        height: 100px;
+        overflow: hidden;
+        @include bgColor();
+        &>div {
+            text-align: left;
+        }
+
+    }
+    @at-root #{&}--head {
+        float: left;
+        img {
+            width: 54px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+    }
+    @at-root #{&}--info {
+        white-space:nowrap;
+        text-overflow:ellipsis;
+        float: left;
+        span {
+            display: block;
+            font-size: 17px;
+            line-height: 34px;
+            white-space: nowrap;
+            em {
+                font-style: normal;
+            }
+            &:nth-of-type(2) {
+                font-size: 4px;
+                line-height: 8px;
+                color: #eee;
+            }
+            &:first-of-type{
+                em {
+                    font-size: 17px;
+                }
+            }
+            &:last-of-type {
+                color: #eeeeee;
+                font-size: 14px;
+            }
+            &:last-of-type em {
+                color: yellow;
+            }
+        }
+        .user_reg {
+            width: 13px;
+        }
+    }
+    @at-root #{&}--infos {
+        white-space:nowrap;
+        text-overflow:ellipsis;
+        float: left;
+        p {
+            font-size: 15px;
+            line-height: 70px;
+            letter-spacing: 2px;
+            a {
+                color: #fff;
+            }
+        }
+    }
+    @at-root #{&}--grade {
+        float: right;
+        margin-top: 29px;
+        position: absolute;
+        right: 0;
+        width: 78px;
+        span {
+            line-height: 22px !important;
+            padding-left: 24px;
+            height: 21px;
+            display: block;
+            font-size: 12px !important;
+            background-image: url($back-img);
+            background-size: 84px;
+            background-repeat: no-repeat;
+        }
+    }
+    @at-root #{&}--tc {
+        position: absolute;
+        width: 100%;
+        top: 100px;
+        left: 0;
+        padding-bottom: 50px;
+    }
+    .NotLog {
+        top: 70px;
+    }
+    @at-root #{&}--tc_box {
+        background: #fff;
+        border-bottom: 1px solid #eee;
+        width: 94%;
+        overflow: hidden;
+        border-top: 1px solid #eee;
+        margin: -30px 5px 0 10px;
+        border-radius: 5px;
+        .van-image {
+            width: 55px;
+        }
+        span {
+            font-size: 14px;
+            color: #666;
+        }
+    }
+    .boxHeight {
+        width: 94%;
+        margin-left: 10px;
+    }
+    @at-root #{&}--listBox {
+        width: 94%;
+        margin-left: 10px;
+        margin-top: 8px;
+        background: #fff;
+        .topTab {
+            font-size: 14px;
+            color: #000;
+            font-weight: bolder;
+        }
+        .tagText {
+            position: absolute;
+            top: 5px;
+            right: 17px;
+        }
+        .topTab-img {
+            position: absolute;
+            width: 16px;
+            height: 9px;
+            top: 5px;
+            right: 20px;
+        }
+        .item-no-after{
+            color: #0047fb!important;
+        }
+        @at-root #{&}_img {
+            width: 18px;
+        }
+        @at-root #{&}_text {
+            margin-top: 6px;
+            font-size: 14px;
+            color: #333;
+        }
+
+    }
+}

@@ -1,0 +1,66 @@
+@import "../../mixins/mixin";
+.credit_message {
+	height: 100%;
+	display: flex;
+	margin: 0 30px;
+	flex-flow: row wrap;
+	.credit_list {
+		margin-top: 20px;
+		min-width: 20%;
+		text-align: center;
+		&.is-active {
+			.credit_item {
+				.green {
+					@include bgColor(#38b366);
+					@include fontColor(#fff);
+					border: #38b366;
+				}
+				.blue {
+					@include bgColor(#218ddd);
+					@include fontColor(#fff);
+					border: #218ddd;
+				}
+				.red {
+					@include bgColor(#dc3b40);
+					@include fontColor(#fff);
+					border: #dc3b40;
+				}
+				.other {
+					@include bgColor(#8e8e8e);
+					@include fontColor(#fff);
+					border: #8e8e8e;
+				}
+			}
+		}
+	}
+	.credit_item {
+		margin-bottom: 10px;
+		> span {
+			font-size: 18px;
+			box-sizing: border-box;
+			border: 1px solid #d3d3d3;
+			display: inline-block;
+			height: 40px;
+			width: 40px;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 40px;
+		}
+		.green {
+			@include fontColor(#38b366);
+		}
+		.blue {
+			@include fontColor(#218ddd);
+		}
+		.red {
+			@include fontColor(#dc3b40);
+		}
+		.other {
+			@include fontColor(#666666);
+		}
+	}
+	.credit_bottom {
+		font-size: 12px;
+		@include fontColor(#666666);
+	}
+}

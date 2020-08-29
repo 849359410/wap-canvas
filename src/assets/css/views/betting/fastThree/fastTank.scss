@@ -1,0 +1,61 @@
+.fastThreeTake{
+    border-bottom: solid 1px #f5f5f5;
+    z-index: 21;
+    .palyData{
+        .data-play{
+            width: 97%;
+            text-align: left;
+            padding: 5px 5px;
+            line-height: 1.2rem;
+            display: flex;
+            flex-wrap: wrap;
+            color: #1f1f21;
+            & .active{
+                font-size: 12px;
+                background-color: #ff8d91;
+                color: #ffffff;
+            }
+            &>div{
+                -webkit-box-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+                float: left;
+                font-size: .4rem;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                text-align: center;
+                line-height: .8rem;
+                margin: 4px;
+                padding: 14px 0;
+                min-width: 30%;
+                max-width: 31%;
+                background-color: #F5F5F5;
+                &.p_odds {
+                    font-size: 12px;
+                }
+                & p.p5 span {
+                    position: relative;
+                    &:before {
+                        content: "+";
+                        position: absolute;
+                        font-size: .6em;
+                        top: -2px;
+                        right: -6px;
+                    }
+                    &:nth-child(3):before {
+                        content: "";
+                    }
+                }
+                & p{
+                    line-height: 22px;
+                    font-size: 17px;
+                }
+                & span{
+                    position: relative;
+                }
+            }
+            
+        }
+        
+    }
+}

@@ -1,0 +1,61 @@
+@import "../../mixins/mixin";
+.subAgentReports {
+    @at-root #{&}--content {
+        background: #fff;
+        margin-top: 1px;
+        ul {
+            padding: 0;
+            margin: 0;
+            li {
+                padding: 3px 6px;
+                border-bottom: 1px solid #ddd;
+                overflow: hidden;
+                position: relative;
+                list-style: none;
+                p {
+                    overflow: hidden;
+                    line-height: 23px;
+                    span {
+                        color: #999;
+                        font-size: 12px;
+                        i {
+                            font-style: normal;
+                        }
+                    }
+                    .red {
+                        @include fontColor();
+                    }
+                    .green {
+                        color: green;
+                    }
+                    .blue {
+                        color: #103f79;
+                    }
+                    .gray {
+                        color: #999;
+                    }
+                    .gray2 {
+                        color: #5f646e;
+                    }
+                }
+            }
+        }
+        div {
+            .no-data {
+                padding-top: 56px;
+                text-align: center;
+                background: #f4f4f4;
+                img {
+                    width: 200px;
+                }
+                p {
+                    text-align: center;
+                    line-height: 26px !important;
+                    font-size: 17px;
+                    color: #333333;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}

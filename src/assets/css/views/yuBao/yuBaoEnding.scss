@@ -1,0 +1,36 @@
+.content {
+    height: 100%;
+    background-color: #f4f4f4 !important;
+    .main {
+        height: 150px;
+        width: 95%;
+        border-radius: 4px;
+        display: block;
+        text-align: center;
+        background-color: #fff;
+        margin: 10px 10px;
+        p {
+            text-align: center;
+        }
+        .ok {
+            font-size: 18px;
+            color: #e23030;
+            font-weight: 600;
+            padding-top: 18px;
+        }
+        .tips {
+            font-size: 14px;
+            color: #999999;
+            margin: 15px auto;
+        }
+        .clickList {
+            border-radius: 4px;
+            padding: 0 26px;
+            background-color: #3e5779;
+            font-size: 14px;
+            span {
+                color: #ffffff;
+            }
+        }
+    }
+}

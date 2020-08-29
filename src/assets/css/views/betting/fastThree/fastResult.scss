@@ -1,0 +1,35 @@
+.fastThree--dataList {
+    height: 32px;
+    line-height: 32px;
+    border-bottom: 1px solid #f4f4f4;
+    position: relative;
+    font-size: 12px;
+    background: #f8f8f8;
+    .van-col {
+        text-align: center;
+        font-size: 12px;
+    }
+    .period {
+        width: 23%;
+    }
+    .results_more {
+        color: #63b7ff;
+        font-weight: 500;
+        position: relative;
+        i {
+            position: absolute;
+            top: 10px;
+            right: 6px;
+        }
+    }
+    > span {
+        display: inline-block;
+        width: 12%;
+        text-align: center;
+        em {
+            font-family: "PingFang-SC-Regular", sans-serif;
+            font-size: 12px;
+            color: #666;
+        }
+    }
+}

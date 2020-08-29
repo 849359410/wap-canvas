@@ -1,0 +1,138 @@
+@import "../../../mixins/mixin";
+$div-color: #ef384a;
+.message {
+    .isHappyLottery {
+        top: 177px;
+    }
+    @at-root #{&}--ul {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: 159px;
+        bottom: 80px;
+        overflow: auto;
+        box-shadow: 0 -2px 10px 0 rgba(153, 153, 153, 0.3);
+        @at-root #{&}_li {
+            @at-root #{&}_code {
+                background-color: #dddddd;
+                text-align: center;
+                @at-root #{&}_fast {
+                    padding: 10px 0;
+                    background-color: #f6f6f6;
+                    p {
+                        display: inline-block;
+                        margin-right: 10px;
+                        &.button--light {
+                            border: none;
+                            color: inherit;
+                            i {
+                                display: none;
+                            }
+                        }
+                        span {
+                            width: 10px;
+                            height: 10px;
+                            display: inline-block;
+                            border: 1px solid $div-color;
+                            position: relative;
+                            i {
+                                font-size: 10px;
+                                height: 10px;
+                                line-height: 9px;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                @include fontColor();
+                            }
+                        }
+                    }
+                }
+            }
+            @at-root #{&}_tips {
+                background-color: #ffffff;
+                padding: 0 10px;
+                font-size: 12px;
+                line-height: 28px;
+                span {
+                    @include fontColor();
+                }
+            }
+            @at-root #{&}_title {
+                background-color: #f5f5f5;
+                height: 42px;
+                padding: 0 10px;
+                .van-col {
+                    margin-top: 7px;
+                }
+                @at-root #{&}_place {
+                    max-width: 30%;
+                    span {
+                        display: inline-block;
+                        @include bgColor();
+                        border: 1px solid $div-color;
+                        color: #ffffff;
+                        padding: 0 10px;
+                        font-size: 14px;
+                        line-height: 28px;
+                        border-radius: 4px;
+                    }
+                }
+                @at-root #{&}_fast {
+                    float: right;
+                    margin-right: 5%;
+                    button {
+                        color: #ffffff;
+                        font-size: 12px;
+                        width: 28px;
+                        height: 28px;
+                        line-height: 28px;
+                        padding: 0;
+                        margin-right: 4px;
+                        &.button--light {
+                            color: #555555;
+                        }
+                    }
+                }
+            }
+            @at-root #{&}_number {
+                background-color: #ffffff;
+                .van-col {
+                    padding: 0 10px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-top: 10px;
+                    div {
+                        flex: 1;
+                        min-width: 20%;
+                        max-width: 20%;
+                        display: inline-block;
+                        margin-bottom: 10px;
+                        text-align: center;
+                        button {
+                            text-align: center;
+                            width: 67px;
+                            height: 50px;
+                            line-height: 50px;
+                            padding: 0;
+                            background-color: #ffffff;
+                            color: #666666;
+                            border: solid 1px #afafaf;
+                            font-size: 1.25rem;
+                            font-weight: 600;
+                            border-radius: 3px;
+                            .van-button__content {
+                                max-width: 100%;
+                            }
+                            &.is-active {
+                                color: #ffffff;
+                                background-color: #ff8d91;
+                                border-color: #ff8d91;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

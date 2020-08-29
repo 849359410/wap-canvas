@@ -1,0 +1,141 @@
+@import "../../mixins/mixin";
+.public_head {
+	@include bgColor();
+	height: 44px;
+	line-height: 44px;
+	color: #ffffff;
+	font-size: 24px;
+	i {
+		font-size: 20px;
+	}
+}
+.rank-list {
+	font-size: 12px;
+	@at-root #{&}_row {
+		border-bottom: 1px solid #dddddd;
+		padding: 10px;
+	}
+	.lottery_logo {
+		float: left;
+		width: 40px;
+		border-radius: 50%;
+	}
+	.lottery_name {
+		text-align: left;
+		margin-bottom: 4px;
+		line-height: 20px;
+		span {
+			display: inline-block;
+		}
+	}
+	.lottery_info {
+		text-align: left;
+		img {
+			float: left;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+		}
+		i {
+			float: left;
+			font-size: 16px;
+			margin-top: 2px;
+		}
+		span {
+			display: inline-block;
+			width: 65px;
+			margin-left: 4px;
+			line-height: 20px;
+			color: #999999;
+		}
+	}
+	.lottery_right {
+		line-height: 44px;
+		text-align: center;
+		i {
+			margin-right: 2px;
+			&:before {
+				color: #c75e00;
+			}
+
+		}
+		.icon-lianZ {
+			&:before {
+				color: #37b14a;
+			}
+		}
+		span {
+			color: #c75e00;
+		}
+		.last_lianz {
+			color: #37b14a;
+		}
+	}
+	$win-3: #ff2c21,#217dff,#bd10e0;
+	$lianz-3: #ff8f00,#030093,#ff2c21;
+	@for $i from 1 through 3 {
+		.lottery_#{$i} {
+			span {
+				color: nth($win-3, $i);
+			}
+			.last_lianz {
+				color: nth($lianz-3, $i);
+			}
+			i {
+				&:before {
+					color: nth($win-3, $i);
+				}
+			}
+			.icon-lianZ {
+				&:before {
+					color: nth($lianz-3, $i);
+				}
+			}
+		}
+	}
+}
+.home {
+	background-color: #f7f7f7;
+	text-align: center;
+}
+.main {
+	@at-root #{&}-head {
+		display: flex;
+		flex-wrap: wrap;
+		background-color: #ffffff;
+		@at-root #{&}_list {
+			background-color: #ffffff;
+			padding: 20px 0;
+			text-align: center;
+			p {
+				font-size: 12px;
+				text-align: center;
+			}
+
+			@at-root #{&}_img {
+				width: 45px;
+				img {
+					width: 45px;
+				}
+			}
+			@at-root #{&}_name {
+				font-size: 12px;
+				line-height: 12px;
+				height: 12px;
+				margin-top: 6px;
+			}
+		}
+	}
+	.bottom-box {
+		margin: 2.66667vw auto;
+		.rank-head {
+			line-height: 10.66667vw;
+			border-bottom: 1px solid #dddddd;
+			text-indent: 2.66667vw;
+			font-size: 3.73333vw;
+			font-weight: 600;
+			text-align: left;
+			background-color: #fff;
+		}
+	}
+}

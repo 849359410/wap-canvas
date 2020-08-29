@@ -1,0 +1,55 @@
+.personalData{
+    @at-root #{&}--box {
+        position: absolute;
+        overflow-y: auto;
+        height: 100%;
+        width: 100%;
+        padding-bottom: 10px;
+        background:#EEEEEE ;
+        font-size: 12px;
+        .login_time{
+            color: #999;
+            padding: 10px 10px 0;
+            u{
+                color: #0b78f8;
+            }
+        }
+        .comfirm-update{
+            width: 95%;
+            margin: 0 auto !important;
+            display: block;
+            background: -webkit-gradient(linear, left top, right top, from(#ffba00), to(#ef384a));
+            background: linear-gradient(to right, #ffba00, #ef384a);
+            color: #fff;
+            border-radius: 6px;
+            font-size: 17px;
+        }
+    }
+    @at-root #{&}--pContent{
+        margin: 20px 10px;
+        background: #EEEEEE;
+        .Separate {
+            margin-top: 10px;
+        }
+        .item-after {
+            font-size: 13px;
+            color: #666;
+            position: absolute;
+            right: 1.53333vw;
+            top: 0;
+            line-height: 25px;
+            .img {
+                width: 25px;
+            }
+        }
+        .rightText {
+            right: -1px;
+        }
+        .rightColor {
+            color: #ef384a;
+        }
+    }
+    em{
+        font-style: normal !important;
+    }
+}

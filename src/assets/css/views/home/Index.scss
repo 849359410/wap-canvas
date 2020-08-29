@@ -1,0 +1,6 @@
+@import "../../mixins/mixin.scss";
+.index {
+	//width: 140px;
+	//height: 100px;
+	@include bgColor();
+}

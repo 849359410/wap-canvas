@@ -1,0 +1,257 @@
+$vip_img: "../../../assets/images/userCenter/grade/vipGrade.png";
+$div-color: #ef384a;
+@import "../../../mixins/mixin";
+.grade{
+    @at-root #{&}--tabHead{
+        height: 50px;
+        display: flex;
+        box-shadow: 0 4px 7px 0 rgba(85,85,85,.2);
+        p{
+            flex: 1;
+            width: 50%;
+            text-align: center;
+            line-height: 50px;
+            color: #666666;
+            font-size: 13px;
+            &:first-child{
+                position: relative;
+                &:before{
+                    width: 1px;
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    border-right: 1px solid #ddd;
+                    height: 50%;
+                    top: 30%;
+                }
+            }
+            &.active{
+                span{
+                    @include fontColor();
+                    border-bottom: 2px solid $div-color;
+                }
+            }
+            span{
+                display: inline-block;
+                padding: 0 20px;
+                line-height: 50px;
+            }
+        }
+    }
+    @at-root #{&}--head{
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(#e0dede,.5);
+        @at-root #{&}_main{
+            @at-root #{&}_head{
+                position: relative;
+                background: linear-gradient(to right,#8392A1,#ADB6BE);
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                padding: 10px 10px 20px;
+                height: 130px;
+                @at-root #{&}_reward{
+                    height: 50px;
+                }
+                .head_img{
+                    width: 48px;
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    margin-right: 8px;
+                    height: 51px;
+                    border-radius: 50%;
+                }
+                .head_name{
+                    display: inline-block;
+                    font-size: 20px;
+                    color: #ffffff;
+                    margin-left: 60px;
+                    line-height: 30px;
+                    height: 30px;
+                    @at-root #{&}_list{
+                        font-size: 12px;
+                        width: 100%;
+                        line-height: 24px;
+                        p{
+                            width: 100%;
+                            display: block;
+                            span{
+                                display: inline-block;
+                                &:last-child{
+                                    position: absolute;
+                                    right: 10px;
+                                }
+                            }
+                        }
+                        .rew_money{
+                            width: 100%;
+                            display: inline-block;
+                            em{
+                                font-style: inherit;
+                                color: #f7e610;
+                            }
+                        }
+                    }
+                }
+                .head_info{
+                    color: #ffffff;
+                    font-size: 12px;
+                    margin-top: 10px;
+                    text-align: center;
+                    span{
+                        margin-right: 10px;
+                        em{
+                            font-style: inherit;
+                            color: #f7e610;
+                        }
+                    }
+                }
+                .head_bar{
+                    text-align: center;
+                    .head_bar_pro{
+                        span{
+                            width: 18%;
+                            display: inline-block;
+                            font-size: 12px;
+                            line-height: 14px;
+                            background-color: #ffffff;
+                            padding: 2px;
+                            border-radius: 4px;
+                            &:first-child{
+                                color: #15a2f9;
+                            }
+                            &:last-child{
+                                color: #f9a93d;
+                            }
+                        }
+                        p{
+                            display: inline-block;
+                            width: 60%;
+                            height: 2px;
+                            background-color: #ffffff;
+                            position: relative;
+                            margin-bottom: 3px;
+                            margin-top: 25px;
+                            span{
+                                position: absolute;
+                                left: 0;
+                                height: 2px;
+                                padding: 0;
+                                border-radius: inherit;
+                                background-color: #60686d;
+                                em{
+                                    font-style: inherit;
+                                    position: absolute;
+                                    right: 0;
+                                    top: -18px;
+                                    left: 0;
+                                    color: #ffec00;
+                                }
+                            }
+                        }
+                    }
+                    p{
+                        font-size: 12px;
+                        color: #434f55;
+                        text-align: center;
+                        margin-top: 5px;
+                    }
+                }
+                .head_com{
+                    display: flex;
+                    p{
+                        flex: 1;
+                        margin: 15px 2.5px;
+                        background: #ffffff;
+                        border-radius: 4px;
+                        padding: 5px 0;
+                        span{
+                            display: block;
+                            text-align: center;
+                            line-height: 20px;
+                            color: #434f55;
+                            font-size: 12px;
+                            &:first-child{
+                                @include fontColor();
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+                .head_vip{
+                    position: absolute;
+                    right: 0;
+                    top: 10px;
+                    span{
+                        display: inline-block;
+                        width: 90px;
+                        height: 25px;
+                        font-size: 12px;
+                        @include fontColor();
+                        text-indent: 30px;
+                        line-height: 25px;
+                        background-image: url($vip_img);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+            @at-root #{&}_but{
+                height: 40px;
+                line-height: 40px;
+                background-color: #3e5972;
+                color: #ffffff;
+                font-size: 16px;
+                text-align: center;
+                font-weight: 600;
+            }
+            @at-root #{&}_noBut{
+                background-color: #707A83;
+            }
+        }
+    }
+    @at-root #{&}--rule{
+        padding: 10px;
+        /deep/ table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: auto!important;
+        }
+    }
+}
+.grade_dig{
+    background-color: rgba(76,76,76,.1);
+    .reve_main{
+        position: relative;
+        width: 300px;
+        .rewardMain{
+            position: absolute;
+            top: 36%;
+            left: 0;
+            right: 0;
+            p{
+                text-align: center;
+                font-size: 12px;
+                color: #666666;
+                font-weight: 600;
+            }
+            .rewardMoney{
+                color: #ff4c3a;
+                font-size: 20px;
+                margin-bottom: 8px;
+                span{
+                    font-size: 12px;
+                    margin-left: 5px;
+                }
+            }
+        }
+        .money{
+            position: absolute;
+            height: 17%;
+            width: 60%;
+            bottom: 12%;
+            left: 20%;
+        }
+    }
+}
+

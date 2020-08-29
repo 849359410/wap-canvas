@@ -1,0 +1,144 @@
+@import "../../mixins/mixin";
+.rebateSetting {
+    @at-root #{&}--box {
+        .topTab--row {
+            background: #ffffff;
+            box-shadow: 0 2px 6px 0 rgba(153, 153, 153, 0.2);
+            height: 50px;
+            @at-root #{&}_col {
+                width: 30%;
+                float: left;
+                text-align: center;
+                margin: 10px 10%;
+                line-height: 30px;
+                font-size: 13px;
+                border-radius: 4px;
+                &:first-child {
+                    position: relative;
+                    &:before {
+                        width: 1px;
+                        content: "";
+                        position: absolute;
+                        right: -33%;
+                        color: #dddddd;
+                        border-right: 1px solid #dddddd;
+                        height: 70%;
+                        top: 15%;
+                    }
+                }
+                &.active {
+                    @include bgColor();
+                    color: #ffffff;
+                }
+            }
+        }
+        .tab-content {
+            .con {
+                .maxRebate {
+                    background: #fff;
+                    border: 1px solid #ddd;
+                    width: 94%;
+                    margin: 10px auto;
+                    border-radius: 4px;
+                    box-shadow: 0 2px 6px 0 rgba(153, 153, 153, 0.2);
+                }
+                .showFd {
+                    p {
+                        text-align: center;
+                        font-size: 14px;
+                        color: #ee5135;
+                        width: 100%;
+                        margin-top: 10px;
+                    }
+                }
+                .table {
+                    width: 100%;
+                    line-height: 40px;
+                    margin-top: 10px;
+                    white-space: nowrap;
+                    border-collapse: collapse;
+                    border-bottom: 1px solid #eee;
+                    background-color: #f6f6f6;
+                    thead {
+                        vertical-align: middle;
+                        font-size: 13px;
+                        font-family: "Pingfang-SC-Medium";
+                        color: #333333;
+                        box-shadow: 0 1px 2px 0 rgba(199, 199, 199, 0.5),
+                        0 -2px 4px 0 rgba(199, 199, 199, 0.5);
+                        tr {
+                            background: #f6f6f6;
+                            border-bottom: 1px solid #cfcfcf;
+                            th {
+                                text-align: center;
+                                &:first-child {
+                                    padding-left: 6px;
+                                }
+                            }
+                        }
+                    }
+                    tbody {
+                        font-family: "PingFang SC - Regular";
+                        font-size: 13px;
+                        color: #666666;
+                        tr {
+                            background: #ffffff;
+                            &:nth-child(odd) {
+                                background: #f6f6f6;
+                            }
+                            td {
+                                text-align: center;
+                                border-bottom: 1px solid #cfcfcf;
+                                &:first-child {
+                                    padding-left: 4px;
+                                }
+                                span {
+                                    margin-left: 4px;
+                                    color: #3da8fe;
+                                    font-weight: 600;
+                                    &:first-child {
+                                        margin-left: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.maxRow {
+    display: block;
+    text-align: center;
+    background: linear-gradient(to right, #ffb200, #ff3400);
+    color: #fff;
+    border-radius: 6px;
+    font-size: 18px;
+    font-family: "PingFangSC-Semibold";
+    line-height: 40px;
+    width: 94%;
+    margin: 30px auto;
+    font-weight: 600;
+}
+.rebateList {
+    width: 90%;
+    border-radius: 10px;
+    .top_text {
+        text-align: center !important;
+        font-size: 4.8vw;
+        color: #333333;
+        font-weight: 600;
+        line-height: 41px;
+        border-bottom: 1px solid #ebedf0;
+    }
+    .custom-title {
+        width: 90px;
+        text-align: center;
+    }
+    .color {
+        font-size: 4.26667vw;
+        color: #333333;
+        font-weight: 600;
+    }
+}

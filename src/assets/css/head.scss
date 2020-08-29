@@ -1,0 +1,20 @@
+@import "./mixins/mixin";
+.head {
+    height:44px;
+    @include bgColor();
+    .van-nav-bar__left {
+        .van-icon {
+            color: white;
+        }
+    }
+    .van-nav-bar__title {
+        color: white;
+    }
+    .van-nav-bar__right {
+        font-size: 22px;
+        padding: 0 10px;
+        .van-icon {
+            color: white;
+        }
+    }
+}

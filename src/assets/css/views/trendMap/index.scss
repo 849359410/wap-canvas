@@ -1,0 +1,91 @@
+.trendMap {
+    .head {
+        z-index: 1000;
+    }
+    .histShow {
+        overflow: hidden;
+        &:before {
+            position: absolute;
+            content: "";
+            width: 16px;
+            height: 16px;
+            right: 13px;
+            top: 36px;
+            background: rgb(246, 246, 246);
+            transform: rotate(-45deg);
+        }
+    }
+    .trend_main {
+        position: fixed;
+        width: 100%;
+        z-index: 999;
+        .top_tabSelect{
+            width: 100%;
+            min-width: 100%;
+            background: white;
+            .ball{
+                width: 100%;
+                height: 40px;
+                font-size: 12px;
+                line-height: 40px;
+                white-space: nowrap;
+                overflow-x: scroll;
+                overflow-y: hidden;
+                background: white;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+                .ball-wei{
+                    margin-right: 5px;
+                    &:first-child{
+                        margin-left: 7px;
+                    }
+                    @at-root #{&}__select{
+                        background: #f60!important;
+                        color: #fff!important;
+                        border: 1px solid #f60;
+                    }
+                }
+                .topButton{
+                    height: 27px;
+                    text-align: center;
+                    color: rgba(13, 0, 7, 0.97);
+                    border-radius: 3px;
+                    font-size: 13px;
+                    border: 1px solid #ddd;
+                    padding: 5px 12px;
+                    background-color: white;
+                }
+            }
+            .ballTow{
+                width: 100%;
+                height: 34px;
+                font-size: 12px;
+                white-space: nowrap;
+                background: white;
+                border-top: 1px solid #ddd;
+                padding: 6px 0 0 0;
+                .ballTow-wei{
+                    margin-right: 5px;
+                    &:first-child{
+                        margin-left: 7px;
+                    }
+                    button{
+                        height: 27px;
+                        text-align: center;
+                        color: rgba(13, 0, 7, 0.97);
+                        border-radius: 3px;
+                        border: 1px solid #ddd;
+                        padding: 0 12px;
+                        background-color: white;
+                    }
+                    @at-root #{&}__select{
+                        background: #f60!important;
+                        color: #fff!important;
+                        border: 1px solid #f60;
+                    }
+                }
+            }
+        }
+    }
+}

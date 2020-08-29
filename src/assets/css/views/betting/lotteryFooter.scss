@@ -1,0 +1,32 @@
+@import "../../mixins/mixin.scss";
+.LotteryFooter {
+	padding: 10px 0;
+	width: 100%;
+  @at-root #{&}-row {
+	  @at-root #{&}--col {
+		  font-size: 12px;
+		  line-height: 14px;
+		  text-align: center;
+		  position: relative;
+		  .img {
+			  width: 14px;
+			  height: 14px;
+			  text-align: center;
+			  margin-right: 3px;
+			  vertical-align: top;
+		  }
+		  &:before{
+			  width: 1px;
+			  content: '|';
+			  position: absolute;
+			  right: 0;
+			  @include fontColor(#ddd);
+		  }
+		  &:last-child{
+			  &:before{
+				  content: '';
+			  }
+		  }
+	  }
+  }
+}

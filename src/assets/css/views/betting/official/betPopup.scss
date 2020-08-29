@@ -1,0 +1,138 @@
+@import "../../../mixins/mixin";
+.orderPopup {
+    .dialog-container {
+        border-radius: 4px;
+    }
+    .popup_title {
+        text-align: center;
+        line-height: 50px;
+        border-bottom: 0.5px solid #d7d7d7;
+        background-color: #ffffff;
+        font-family: "PinFangSC-Semibold";
+        font-size: 18px;
+        color: #333333;
+        font-weight: 600;
+    }
+    .popup_main {
+        padding: 6px 6px 0 6px;
+        font-size: 13px;
+        line-height: 30px;
+        background-color: #ffffff;
+        color: #9b9b9b;
+        @at-root #{&}--odds {
+            color: #666;
+            .van-col:nth-child(2) {
+                text-align: right;
+            }
+        }
+        @at-root #{&}--bets {
+            input {
+                width: 60px;
+                border: 0.5px solid #cfcfcf;
+                border-radius: 2px;
+                line-height: 24px;
+                height: 24px;
+                text-indent: 10px;
+                margin-right: 4px;
+                padding: 0;
+                color: #000000;
+            }
+            @at-root #{&}_patt {
+                @at-root #{&}--money {
+                    width: 24px !important;
+                    line-height: 24px !important;
+                    font-size: 13px !important;
+                    color: #666666;
+                    font-family: "PingFang SC - Regular";
+                    &.active {
+                        color: #ffffff;
+                        @include bgColor();
+                    }
+                }
+            }
+            @at-root #{&}_tab {
+                border: 0.5px solid #cfcfcf;
+                border-radius: 4px;
+                background-color: #f7f7f7;
+                box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.2);
+                padding: 4px;
+                display: flex;
+                margin: 10px 0;
+                color: #666666;
+                span {
+                    display: inline-block;
+                    flex: 1;
+                    border: 1px solid #dedede;
+                    height: 32px;
+                    width: 51px;
+                    line-height: 32px;
+                    text-align: center;
+                    margin: 10px 5px;
+                    background-color: #ffffff;
+                    font-size: 14px;
+                    font-family: "PinFangSC-Semibold";
+                    border-radius: 4px;
+                    &.active {
+                        @include bgColor();
+                        color: #ffffff;
+                    }
+                }
+            }
+            @at-root #{&}_multiple {
+                span {
+                    &:first-child {
+                        font-family: "PingFang SC - Regular";
+                        font-size: 13px;
+                        color: #666666;
+                    }
+                }
+                @at-root #{&}--add {
+                    display: inline-block;
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 4px;
+                    line-height: 20px;
+                    margin: 0 2px;
+                    text-align: center;
+                    font-size: 30px;
+                    vertical-align: middle;
+                    border: 0.5px solid #cfcfcf;
+                }
+            }
+            @at-root #{&}_pline {
+                p {
+                    font-family: "PingFang SC - Regular";
+                    font-size: 13px;
+                    color: #666666;
+                    span {
+                        font-family: "PingFangSC-Semibold";
+                        color: #333333;
+                        font-weight: 600;
+                        margin: 0 20px;
+                    }
+                }
+            }
+            @at-root #{&}_bottom {
+                border-top: 1px solid #dedede;
+                margin: 15px 0 0;
+                .van-button {
+                    display: inline-block;
+                    border: none;
+                    width: 50%;
+                    text-align: center;
+                    height: 40px;
+                    line-height: 40px;
+                    font-size: 16px;
+                    color: #666666;
+                    font-family: "Pingfang-SC-Medium";
+                    font-weight: 600;
+                    &:last-child {
+                        width: 49%;
+                        border-left: 1px solid #dedede;
+                        color: #2195f3;
+                    }
+                }
+            }
+        }
+    }
+}

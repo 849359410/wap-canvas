@@ -1,0 +1,26 @@
+@import "../../../mixins/mixin";
+.headMain {
+	.head {
+		.center {
+			.van-dropdown-menu {
+				@include bgColor();
+				height: 100%;
+				display: block;
+			}
+		}
+	}
+}
+.fastTakeName {
+	display: inline-block;
+	font-size: 13px;
+	width: auto;
+	padding: 5px 10px;
+	line-height: 25px;
+	height: 25px;
+	border: 1px solid #ffffff;
+	border-radius: 2px;
+	margin-right: 5px;
+	span {
+		margin-right: 3px;
+	}
+}

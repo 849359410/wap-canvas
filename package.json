@@ -1,0 +1,50 @@
+{
+	"name": "eg_wap_y_rebuild",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"serve": "vue-cli-service serve",
+		"build": "vue-cli-service build --modern --mode build",
+		"lint": "vue-cli-service lint",
+		"test": "vue-cli-service build --mode test",
+		"review": "vue-cli-service build --mode review",
+		"lintfix": "eslint --fix  --ext  .js,.vue src"
+	},
+	"dependencies": {
+		"@xunlei/vue-context-menu": "^1.0.2",
+		"babel-plugin-import": "^1.13.0",
+		"core-js": "^2.6.5",
+		"css-loader": "^2.1.0",
+		"highcharts": "^8.1.0",
+		"js-md5": "^0.7.3",
+		"lodash": "^4.17.15",
+		"material-design-icons-iconfont": "^4.0.3",
+		"store": "^2.0.12",
+		"vant": "^2.6.3",
+		"vue": "^2.5.17",
+		"vue-awesome-swiper": "^2.5.4",
+		"vue-clipboard2": "^0.2.1",
+		"vue-lottie": "^0.2.1",
+		"vue-nodeplayer": "^0.1.1",
+		"vue-router": "^3.0.1",
+		"vuex": "^3.0.1"
+	},
+	"devDependencies": {
+		"@server/courier": "git+http://Deploy:DhTarnblTQYr5enb@git.eg88888888.com/server/courier.git",
+		"@server/singularity": "git+http://Deploy:DhTarnblTQYr5enb@git.eg88888888.com/server/singularity.git",
+		"@server/socket": "git+http://Deploy:DhTarnblTQYr5enb@git.eg88888888.com/server/socket.git",
+		"@vue/cli-plugin-babel": "^3.5.0",
+		"@vue/cli-plugin-eslint": "^3.5.0",
+		"@vue/cli-service": "^3.5.0",
+		"@vue/eslint-config-prettier": "^4.0.1",
+		"@xunlei/vue-context-menu": "^1.0.2",
+		"babel-eslint": "^10.0.1",
+		"babel-plugin-jsx-v-model": "^2.0.3",
+		"eslint": "^5.8.0",
+		"eslint-plugin-vue": "^5.0.0",
+		"node-sass": "^4.9.0",
+		"postcss-px-to-viewport": "^1.1.1",
+		"sass-loader": "^7.1.0",
+		"vue-template-compiler": "^2.5.17"
+	}
+}
